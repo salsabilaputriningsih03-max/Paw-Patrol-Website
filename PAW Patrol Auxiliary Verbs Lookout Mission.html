@@ -1,0 +1,1970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAW Patrol: Auxiliary Verbs Lookout Mission!</title>
+    
+    <!-- Google Fonts: Fredoka & Nunito via HTTPS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS via HTTPS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Fredoka', 'sans-serif'],
+                        body: ['Nunito', 'sans-serif'],
+                    },
+                    colors: {
+                        pawBlue: '#0057B8',
+                        pawSky: '#1E90FF',
+                        pawRed: '#E4002B',
+                        pawYellow: '#FFD100',
+                        pawGreen: '#28A745',
+                        pawOrange: '#FF6B00',
+                        pawPink: '#FF4F9A',
+                        pawDark: '#0F172A',
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'bounce-short': 'bounceShort 0.5s ease-in-out',
+                        'pulse-glow': 'pulseGlow 2s infinite',
+                        'wiggle': 'wiggle 0.45s ease-in-out',
+                        'spin-slow': 'spin 9s linear infinite',
+                        'radar-sweep': 'radarSweep 6s ease-in-out infinite',
+                        'cloud-drift': 'cloudDrift 45s linear infinite',
+                        'cloud-drift-slow': 'cloudDrift 68s linear infinite',
+                        'pup-jump': 'pupJump 0.55s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-8px)' },
+                        },
+                        bounceShort: {
+                            '0%, 100%': { transform: 'translateY(0) scale(1)' },
+                            '50%': { transform: 'translateY(-14px) scale(1.08)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 15px rgba(255, 209, 0, 0.55)' },
+                            '50%': { boxShadow: '0 0 28px rgba(255, 209, 0, 0.98)' },
+                        },
+                        wiggle: {
+                            '0%, 100%': { transform: 'rotate(0deg)' },
+                            '25%': { transform: 'rotate(-8deg)' },
+                            '75%': { transform: 'rotate(8deg)' },
+                        },
+                        radarSweep: {
+                            '0%, 100%': { transform: 'rotate(-28deg)' },
+                            '50%': { transform: 'rotate(28deg)' },
+                        },
+                        cloudDrift: {
+                            '0%': { transform: 'translateX(-220px)' },
+                            '100%': { transform: 'translateX(115vw)' },
+                        },
+                        pupJump: {
+                            '0%': { transform: 'translateY(0) scale(1)' },
+                            '40%': { transform: 'translateY(-20px) scale(1.14) rotate(-4deg)' },
+                            '75%': { transform: 'translateY(-6px) scale(1.05) rotate(4deg)' },
+                            '100%': { transform: 'translateY(0) scale(1) rotate(0deg)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Decorative Styles & Multi-Layered PAW Patrol Motif Background */
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(180deg, #CBE7FF 0%, #E8F5FF 42%, #F4FAFF 100%);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        h1, h2, h3, .font-fredoka {
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        /* Multi-Color Paw Print, Bone & Shield Motif Watermark */
+        .paw-bg-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='140' height='140' viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill-opacity='0.07'%3E%3Cg fill='%230057B8'%3E%3Cellipse cx='35' cy='45' rx='9' ry='7'/%3E%3Ccircle cx='24' cy='32' r='4'/%3E%3Ccircle cx='32' cy='27' r='4'/%3E%3Ccircle cx='40' cy='27' r='4'/%3E%3Ccircle cx='47' cy='32' r='4'/%3E%3C/g%3E%3Cg fill='%23E4002B' transform='translate(70,65) rotate(18)'%3E%3Cellipse cx='35' cy='45' rx='8' ry='6'/%3E%3Ccircle cx='25' cy='33' r='3.5'/%3E%3Ccircle cx='32' cy='28' r='3.5'/%3E%3Ccircle cx='39' cy='28' r='3.5'/%3E%3Ccircle cx='46' cy='33' r='3.5'/%3E%3C/g%3E%3Cg fill='%23FF6B00'%3E%3Crect x='22' y='105' width='24' height='6' rx='3'/%3E%3Ccircle cx='22' cy='104' r='4.5'/%3E%3Ccircle cx='22' cy='111' r='4.5'/%3E%3Ccircle cx='46' cy='104' r='4.5'/%3E%3Ccircle cx='46' cy='111' r='4.5'/%3E%3C/g%3E%3Cg fill='%2328A745'%3E%3Cpolygon points='108,18 111,25 119,25 113,30 115,37 108,33 101,37 103,30 97,25 105,25'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Walking Paw Print Trail Animation */
+        @keyframes pawStepFade {
+            0%, 100% { opacity: 0.06; transform: scale(0.92); }
+            50% { opacity: 0.28; transform: scale(1.08); }
+        }
+        .walking-paw {
+            animation: pawStepFade 3.2s infinite ease-in-out;
+        }
+
+        /* Motion Disabled Override */
+        body.reduce-motion .motion-layer,
+        body.reduce-motion .animate-float,
+        body.reduce-motion .animate-spin-slow,
+        body.reduce-motion .animate-radar-sweep {
+            animation: none !important;
+        }
+        body.reduce-motion .motion-layer {
+            display: none !important;
+        }
+
+        /* Pup-Pad Bezel & Dialog Styling */
+        .pup-pad-frame {
+            border: 6px solid #0057B8;
+            box-shadow: 
+                0 12px 0 #003B73,
+                0 22px 40px rgba(0, 59, 115, 0.24),
+                inset 0 2px 12px rgba(255, 255, 255, 0.9);
+            background: linear-gradient(180deg, rgba(255,255,255,0.97) 0%, rgba(244,249,255,0.97) 100%);
+            backdrop-filter: blur(6px);
+        }
+
+        /* 3D Button Press Effect */
+        .btn-3d {
+            transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        .btn-3d:active {
+            transform: translateY(4px);
+            box-shadow: 0 1px 0 rgba(0,0,0,0.3) !important;
+        }
+
+        /* 3D Flip Card Styling */
+        .flip-card {
+            perspective: 1200px;
+            cursor: pointer;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-style: preserve-3d;
+        }
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 1.5rem;
+        }
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+
+        /* Mindmap Glowing Lines */
+        .mindmap-connector {
+            stroke-dasharray: 10;
+            animation: dashFlow 18s linear infinite;
+        }
+        @keyframes dashFlow {
+            to {
+                stroke-dashoffset: -1000;
+            }
+        }
+
+        /* Slide Transition */
+        .slide-panel {
+            display: none;
+            animation: slideFadeIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .slide-panel.active {
+            display: block;
+        }
+        @keyframes slideFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(16px) scale(0.985);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #DBEAFE;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0057B8;
+            border-radius: 9999px;
+            border: 2px solid #DBEAFE;
+        }
+    </style>
+</head>
+<body class="paw-bg-pattern min-h-screen flex flex-col justify-between text-slate-800 select-none sm:select-auto">
+
+    <!-- ===================================================================== -->
+    <!-- ANIMATED ADVENTURE BAY & LOOKOUT TOWER MOTIFED BACKGROUND LAYER       -->
+    <!-- ===================================================================== -->
+    <div class="motion-layer fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+        <!-- Drifting Clouds -->
+        <svg class="absolute top-16 left-0 w-44 h-24 text-white/75 animate-cloud-drift" viewBox="0 0 200 100" fill="currentColor">
+            <path d="M45 80h110a25 25 0 0 0 4-49.7A35 35 0 0 0 92 22a30 30 0 0 0-47 28A20 20 0 0 0 45 80z"/>
+        </svg>
+        <svg class="absolute top-36 left-0 w-56 h-28 text-white/60 animate-cloud-drift-slow" style="animation-delay: -18s;" viewBox="0 0 200 100" fill="currentColor">
+            <path d="M45 80h110a25 25 0 0 0 4-49.7A35 35 0 0 0 92 22a30 30 0 0 0-47 28A20 20 0 0 0 45 80z"/>
+        </svg>
+
+        <!-- Stylized Lookout Tower Silhouette with Rotating Beacon Beam (Bottom Left) -->
+        <div class="hidden xl:block absolute bottom-12 left-4 w-52 h-80 opacity-20">
+            <svg viewBox="0 0 200 320" class="w-full h-full">
+                <!-- Rotating Light Beam -->
+                <g transform="translate(100, 48)" class="animate-radar-sweep">
+                    <polygon points="0,0 -95,-35 -95,35" fill="#FFD100" opacity="0.65"/>
+                    <polygon points="0,0 95,-35 95,35" fill="#FFD100" opacity="0.65"/>
+                </g>
+                <!-- Tower Roof & Periscope -->
+                <rect x="93" y="14" width="14" height="24" rx="4" fill="#E4002B"/>
+                <polygon points="100,32 42,68 158,68" fill="#E4002B"/>
+                <!-- Observation Deck -->
+                <rect x="52" y="68" width="96" height="32" rx="8" fill="#0057B8"/>
+                <rect x="64" y="75" width="72" height="16" rx="4" fill="#FFD100"/>
+                <!-- Tower Neck & Slide -->
+                <rect x="78" y="100" width="44" height="155" fill="#0057B8"/>
+                <path d="M122 115 Q175 155 135 205 Q95 245 155 280" fill="none" stroke="#FF6B00" stroke-width="14" stroke-linecap="round"/>
+                <!-- Base Garage -->
+                <path d="M35 310 L50 245 L150 245 L165 310 Z" fill="#0057B8"/>
+                <circle cx="100" cy="272" r="18" fill="#FFD100"/>
+            </svg>
+        </div>
+
+        <!-- Walking Paw-Print Footstep Trail (Bottom Right) -->
+        <div class="hidden md:flex items-end gap-5 absolute bottom-16 right-8 opacity-75">
+            <svg class="w-9 h-9 text-[#0057B8] walking-paw -rotate-12" style="animation-delay: 0s;" viewBox="0 0 64 64" fill="currentColor">
+                <ellipse cx="32" cy="40" rx="12" ry="10"/><circle cx="17" cy="24" r="5.5"/><circle cx="27" cy="17" r="5.5"/><circle cx="38" cy="17" r="5.5"/><circle cx="47" cy="24" r="5.5"/>
+            </svg>
+            <svg class="w-9 h-9 text-[#E4002B] walking-paw rotate-12 mb-5" style="animation-delay: 0.55s;" viewBox="0 0 64 64" fill="currentColor">
+                <ellipse cx="32" cy="40" rx="12" ry="10"/><circle cx="17" cy="24" r="5.5"/><circle cx="27" cy="17" r="5.5"/><circle cx="38" cy="17" r="5.5"/><circle cx="47" cy="24" r="5.5"/>
+            </svg>
+            <svg class="w-9 h-9 text-[#28A745] walking-paw -rotate-6 mb-1" style="animation-delay: 1.1s;" viewBox="0 0 64 64" fill="currentColor">
+                <ellipse cx="32" cy="40" rx="12" ry="10"/><circle cx="17" cy="24" r="5.5"/><circle cx="27" cy="17" r="5.5"/><circle cx="38" cy="17" r="5.5"/><circle cx="47" cy="24" r="5.5"/>
+            </svg>
+            <svg class="w-9 h-9 text-[#FF6B00] walking-paw rotate-12 mb-7" style="animation-delay: 1.65s;" viewBox="0 0 64 64" fill="currentColor">
+                <ellipse cx="32" cy="40" rx="12" ry="10"/><circle cx="17" cy="24" r="5.5"/><circle cx="27" cy="17" r="5.5"/><circle cx="38" cy="17" r="5.5"/><circle cx="47" cy="24" r="5.5"/>
+            </svg>
+            <svg class="w-9 h-9 text-[#FF4F9A] walking-paw -rotate-12 mb-3" style="animation-delay: 2.2s;" viewBox="0 0 64 64" fill="currentColor">
+                <ellipse cx="32" cy="40" rx="12" ry="10"/><circle cx="17" cy="24" r="5.5"/><circle cx="27" cy="17" r="5.5"/><circle cx="38" cy="17" r="5.5"/><circle cx="47" cy="24" r="5.5"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Confetti / Star Celebration Overlay -->
+    <div id="celebration-container" class="fixed inset-0 pointer-events-none z-50 overflow-hidden"></div>
+
+    <!-- ===================================================================== -->
+    <!-- TOP LOOKOUT TOWER HEADER & INTERACTIVE 7-HERO PUP ROSTER              -->
+    <!-- ===================================================================== -->
+    <header class="sticky top-0 z-40 bg-gradient-to-r from-[#0057B8] via-[#1E90FF] to-[#0057B8] text-white border-b-4 border-[#FFD100] shadow-xl">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 py-2 flex flex-wrap items-center justify-between gap-2">
+            
+            <!-- Brand / Lookout Logo -->
+            <div class="flex items-center gap-2.5 cursor-pointer group" onclick="interactPup('ryder', 0)">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 bg-[#E4002B] rounded-2xl border-2 border-[#FFD100] flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                    <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm-2.5 8.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm2.5 5.5c-1.66 0-3-1.12-3-2.5S10.34 11 12 11s3 1.12 3 2.5-1.34 2.5-3 2.5zm2.5-5.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="font-fredoka font-bold text-lg sm:text-xl tracking-wide text-[#FFD100] drop-shadow">PAW PATROL</span>
+                        <span class="hidden xl:inline-block text-[11px] font-extrabold uppercase bg-[#E4002B] px-2 py-0.5 rounded-full border border-white/50">Lookout HQ</span>
+                    </div>
+                    <p class="text-xs font-bold text-blue-100 leading-tight">Auxiliary Verbs Rescue Mission</p>
+                </div>
+            </div>
+
+            <!-- Interactive Pressable 7-Hero Pup Roster (Rendered with Mini Custom SVG Portraits!) -->
+            <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto py-1" id="header-pup-roster">
+                <!-- Populated dynamically by JS with mini SVG avatars for Ryder, Chase, Marshall, Rocky, Rubble, Zuma, Skye -->
+            </div>
+
+            <!-- Utility Controls: Sound & Motion Toggle -->
+            <div class="flex items-center gap-1.5">
+                <button id="motion-toggle-btn" onclick="toggleMotion()" title="Toggle Animated Background" class="bg-white/20 hover:bg-white/30 text-white font-extrabold text-xs px-2.5 py-1.5 rounded-full border border-white/60 flex items-center gap-1 transition">
+                    <span id="motion-icon">☁️</span>
+                    <span class="hidden sm:inline">Motion</span>
+                </button>
+                <button id="sound-toggle-btn" onclick="toggleSound()" title="Toggle Sound Effects" class="bg-[#FFD100] text-slate-900 hover:bg-yellow-300 font-extrabold text-xs px-2.5 py-1.5 rounded-full shadow border-2 border-white flex items-center gap-1 transition">
+                    <span id="sound-icon">🔊</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Presentation Progress Bar -->
+        <div class="w-full bg-[#003B73] h-2">
+            <div id="mission-progress-bar" class="bg-gradient-to-r from-[#FFD100] via-[#FF6B00] to-[#28A745] h-2 transition-all duration-500" style="width: 20%;"></div>
+        </div>
+    </header>
+
+    <!-- FLOATING PUP SPEECH BUBBLE (Appears with Custom Character Portrait whenever a pup is pressed!) -->
+    <div id="pup-speech-toast" class="fixed bottom-24 right-4 sm:right-8 z-50 max-w-xs sm:max-w-md transform translate-y-36 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-white border-4 border-[#0057B8] rounded-3xl p-4 shadow-2xl flex items-center gap-3.5">
+            <div id="toast-avatar" class="w-16 h-16 rounded-2xl flex-shrink-0 flex items-center justify-center shadow-md border-2 border-[#FFD100] overflow-hidden bg-blue-50">
+                <!-- Custom SVG Portrait Injected Here -->
+            </div>
+            <div>
+                <div class="flex items-center justify-between gap-2">
+                    <h4 id="toast-name" class="font-fredoka font-bold text-base text-[#0057B8]">Ryder</h4>
+                    <span class="text-[10px] font-extrabold uppercase tracking-wider bg-[#FFD100] text-slate-900 px-2 py-0.5 rounded-full">Pup-Pad Call</span>
+                </div>
+                <p id="toast-message" class="text-xs sm:text-sm font-bold text-slate-700 mt-1 leading-snug">
+                    "No job is too big, no pup is too small! Let's master Auxiliary Verbs!"
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- MAIN PRESENTATION STAGE (PUP-PAD VIEWPORT)                            -->
+    <!-- ===================================================================== -->
+    <main class="relative z-10 flex-grow max-w-7xl w-full mx-auto px-3 sm:px-6 py-5 sm:py-7">
+        
+        <!-- Slide Navigation Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-6">
+            <button onclick="goToSlide(0)" class="slide-tab px-4 py-2 rounded-2xl font-fredoka font-bold text-sm sm:text-base border-2 transition-all shadow-sm flex items-center gap-2 bg-[#0057B8] text-white border-[#FFD100]" data-slide="0">
+                <span>1. Lookout Briefing</span>
+            </button>
+            <button onclick="goToSlide(1)" class="slide-tab px-4 py-2 rounded-2xl font-fredoka font-bold text-sm sm:text-base border-2 transition-all shadow-sm flex items-center gap-2 bg-white text-[#0057B8] border-blue-200 hover:border-[#0057B8]" data-slide="1">
+                <span>2. Auxiliary Mindmap</span>
+            </button>
+            <button onclick="goToSlide(2)" class="slide-tab px-4 py-2 rounded-2xl font-fredoka font-bold text-sm sm:text-base border-2 transition-all shadow-sm flex items-center gap-2 bg-white text-[#0057B8] border-blue-200 hover:border-[#0057B8]" data-slide="2">
+                <span>3. Modals & Sentence Lab</span>
+            </button>
+            <button onclick="goToSlide(3)" class="slide-tab px-4 py-2 rounded-2xl font-fredoka font-bold text-sm sm:text-base border-2 transition-all shadow-sm flex items-center gap-2 bg-white text-[#0057B8] border-blue-200 hover:border-[#0057B8]" data-slide="3">
+                <span>4. Skye's 3D Flip-Cards</span>
+            </button>
+            <button onclick="goToSlide(4)" class="slide-tab px-4 py-2 rounded-2xl font-fredoka font-bold text-sm sm:text-base border-2 transition-all shadow-sm flex items-center gap-2 bg-white text-[#0057B8] border-blue-200 hover:border-[#0057B8]" data-slide="4">
+                <span>5. Rescue Mini-Games</span>
+            </button>
+        </div>
+
+        <!-- ===================================================================== -->
+        <!-- SLIDE 0: LOOKOUT TOWER BRIEFING & ALL 7 INTERACTIVE HEROES            -->
+        <!-- ===================================================================== -->
+        <section id="slide-0" class="slide-panel active pup-pad-frame rounded-3xl p-5 sm:p-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 items-center mb-7">
+                
+                <!-- Left Column: Mission Objective & Core Definition -->
+                <div class="lg:col-span-7 space-y-4">
+                    <div class="inline-flex items-center gap-2 bg-[#FFD100] text-slate-900 font-extrabold text-xs sm:text-sm px-4 py-1.5 rounded-full border-2 border-[#FF6B00] shadow-sm">
+                        <span>🚨 ADVENTURE BAY GRAMMAR EMERGENCY</span>
+                    </div>
+                    
+                    <h1 class="font-fredoka text-3xl sm:text-5xl font-bold text-[#0057B8] leading-tight">
+                        Auxiliary Verbs: <br>
+                        <span class="text-[#E4002B]">The Rescue Helpers</span> of English!
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg font-bold text-slate-700 leading-relaxed">
+                        Just like the PAW Patrol pups team up to help Ryder save Adventure Bay, <span class="text-[#0057B8] underline decoration-[#FFD100] decoration-4">Auxiliary Verbs (Helping Verbs)</span> team up with main verbs to show <strong>time (tense)</strong>, <strong>questions</strong>, <strong>negatives</strong>, and <strong>special moods</strong>!
+                    </p>
+
+                    <!-- Video-Game Style Dialog Box -->
+                    <div class="bg-blue-50 border-4 border-[#1E90FF] rounded-2xl p-4 sm:p-5 relative shadow-inner">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="w-3 h-3 rounded-full bg-[#E4002B]"></span>
+                            <span class="w-3 h-3 rounded-full bg-[#FFD100]"></span>
+                            <span class="w-3 h-3 rounded-full bg-[#28A745]"></span>
+                            <span class="text-xs font-extrabold uppercase text-[#0057B8] ml-1">Pup-Pad Grammar Formula</span>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-3 text-center font-fredoka text-base sm:text-xl font-bold">
+                            <span class="bg-[#0057B8] text-white px-3.5 py-2 rounded-xl shadow">Subject (Pup)</span>
+                            <span class="text-[#FF6B00] text-2xl">+</span>
+                            <span class="bg-[#FFD100] text-slate-900 px-3.5 py-2 rounded-xl border-2 border-[#FF6B00] shadow animate-pulse-glow">Auxiliary Verb</span>
+                            <span class="text-[#FF6B00] text-2xl">+</span>
+                            <span class="bg-[#28A745] text-white px-3.5 py-2 rounded-xl shadow">Main Action Verb</span>
+                        </div>
+                        <p class="text-sm font-bold text-slate-600 mt-3">
+                            Example: <span class="text-[#0057B8]">Chase</span> <span class="bg-[#FFD100]/70 px-1.5 py-0.5 rounded font-extrabold text-slate-900">is</span> <span class="text-[#28A745]">driving</span> his police cruiser!
+                        </p>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-wrap gap-3 pt-1">
+                        <button onclick="goToSlide(1); playPupSound('chase');" class="btn-3d bg-[#E4002B] hover:bg-red-600 text-white font-fredoka font-bold text-base sm:text-lg px-6 py-3.5 rounded-2xl border-2 border-[#FFD100] shadow-[0_5px_0_#991B1B] flex items-center gap-2">
+                            <span>🐾 Launch Interactive Mindmap</span>
+                            <span>➔</span>
+                        </button>
+                        <button onclick="interactPup('ryder', 0)" class="btn-3d bg-[#0057B8] hover:bg-blue-800 text-white font-fredoka font-bold text-base sm:text-lg px-5 py-3.5 rounded-2xl border-2 border-[#1E90FF] shadow-[0_5px_0_#003B73]">
+                            <span>📣 Call Ryder on Pup-Pad</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Ryder Command Center Spotlight -->
+                <div class="lg:col-span-5">
+                    <div onclick="interactPup('ryder', 0)" class="cursor-pointer group bg-gradient-to-br from-[#0057B8] via-[#1E90FF] to-[#003B73] p-5 rounded-3xl border-4 border-[#FFD100] shadow-xl text-white text-center relative overflow-hidden">
+                        <div class="absolute -top-6 -right-6 w-28 h-28 bg-[#FFD100]/20 rounded-full blur-xl"></div>
+                        <span class="inline-block bg-[#E4002B] text-white text-xs font-extrabold uppercase px-3 py-1 rounded-full border border-white mb-2">Mission Commander</span>
+                        <div id="ryder-hero-portrait" class="w-36 h-36 mx-auto my-1 transform group-hover:scale-110 transition-transform animate-float">
+                            <!-- Custom Ryder SVG injected by JS -->
+                        </div>
+                        <h2 class="font-fredoka text-2xl font-bold text-[#FFD100]">RYDER & THE PUP-PAD</h2>
+                        <p class="text-xs sm:text-sm text-blue-100 font-bold mt-1">
+                            "Click any of our 7 PAW Patrol heroes below to hear their catchphrase, trigger their vehicle sound, and jump to their grammar specialty!"
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive 7-Hero Squad Gallery (All 7 Characters Pressable!) -->
+            <div class="bg-gradient-to-r from-blue-50 via-yellow-50/70 to-blue-50 border-3 border-blue-200 rounded-3xl p-4 sm:p-5">
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                    <h3 class="font-fredoka text-xl sm:text-2xl font-bold text-[#0057B8]">
+                        🐾 Press Any Hero to Deploy Their Grammar Power!
+                    </h3>
+                    <span class="text-xs font-extrabold bg-[#0057B8] text-[#FFD100] px-3 py-1 rounded-full">7 Interactive Heroes</span>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3" id="briefing-hero-grid">
+                    <!-- Populated dynamically with Custom SVG Characters for Ryder, Chase, Marshall, Rocky, Rubble, Zuma, Skye -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================== -->
+        <!-- SLIDE 1: INTERACTIVE PUP-PAD MINDMAP (SKILL TREE OF AUXILIARY VERBS)  -->
+        <!-- ===================================================================== -->
+        <section id="slide-1" class="slide-panel pup-pad-frame rounded-3xl p-5 sm:p-8">
+            <div class="text-center max-w-3xl mx-auto mb-6">
+                <span class="bg-[#0057B8] text-[#FFD100] text-xs font-extrabold uppercase px-3.5 py-1 rounded-full border-2 border-[#FFD100]">Interactive Mindmap & Skill Tree</span>
+                <h2 class="font-fredoka text-3xl sm:text-4xl font-bold text-[#0057B8] mt-2">
+                    PAW Patrol Auxiliary Verbs Mindmap
+                </h2>
+                <p class="text-sm sm:text-base font-bold text-slate-600 mt-1">
+                    Click any Pup Branch Node below to expand its grammar rules, forms, and rescue examples!
+                </p>
+            </div>
+
+            <!-- MINDMAP VISUAL TREE -->
+            <div class="relative">
+                <!-- Central HQ Node -->
+                <div class="flex justify-center mb-5 relative z-10">
+                    <div onclick="selectMindmapBranch('all'); playPupSound('ryder');" class="cursor-pointer bg-gradient-to-r from-[#0057B8] via-[#1E90FF] to-[#0057B8] text-white px-7 py-4 rounded-3xl border-4 border-[#FFD100] shadow-xl text-center transform hover:scale-105 transition">
+                        <div class="text-xs font-extrabold uppercase tracking-widest text-[#FFD100]">Lookout Tower Core</div>
+                        <h3 class="font-fredoka text-2xl sm:text-3xl font-bold">AUXILIARY VERBS</h3>
+                        <p class="text-xs font-bold text-blue-100 mt-0.5">2 Main Families: Primary Auxiliaries & Modal Auxiliaries</p>
+                    </div>
+                </div>
+
+                <!-- Decorative SVG Connector Lines (Visible on Desktop) -->
+                <svg class="hidden lg:block w-full h-14 -mt-5 mb-1 pointer-events-none" viewBox="0 0 1000 60" preserveAspectRatio="none">
+                    <path d="M500,0 C500,30 125,20 125,60" fill="none" stroke="#1E90FF" stroke-width="5" class="mindmap-connector"/>
+                    <path d="M500,0 C500,30 375,20 375,60" fill="none" stroke="#E4002B" stroke-width="5" class="mindmap-connector"/>
+                    <path d="M500,0 C500,30 625,20 625,60" fill="none" stroke="#28A745" stroke-width="5" class="mindmap-connector"/>
+                    <path d="M500,0 C500,30 875,20 875,60" fill="none" stroke="#FF6B00" stroke-width="5" class="mindmap-connector"/>
+                </svg>
+
+                <!-- 4 Interactive Branch Nodes with Custom Pup Portraits -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                    
+                    <!-- Branch 1: TO BE (Chase - Blue) -->
+                    <div id="node-be" onclick="selectMindmapBranch('be')" class="mindmap-node cursor-pointer rounded-3xl p-4 border-4 border-[#1E90FF] bg-blue-50 hover:bg-blue-100 transition-all transform hover:-translate-y-1 shadow-md">
+                        <div class="flex items-center justify-between gap-2 mb-2">
+                            <div>
+                                <span class="bg-[#0057B8] text-white text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">PRIMARY #1</span>
+                                <h4 class="font-fredoka text-xl font-bold text-[#0057B8] mt-1">1. Verb "TO BE"</h4>
+                                <p class="text-xs font-extrabold text-[#1E90FF] uppercase">Chase's Patrol</p>
+                            </div>
+                            <div class="w-16 h-16 flex-shrink-0" id="mindmap-portrait-chase"></div>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mt-2">
+                            <span class="bg-white border border-blue-300 text-[#0057B8] font-extrabold text-xs px-2 py-0.5 rounded-lg">am</span>
+                            <span class="bg-white border border-blue-300 text-[#0057B8] font-extrabold text-xs px-2 py-0.5 rounded-lg">is</span>
+                            <span class="bg-white border border-blue-300 text-[#0057B8] font-extrabold text-xs px-2 py-0.5 rounded-lg">are</span>
+                            <span class="bg-white border border-blue-300 text-[#0057B8] font-extrabold text-xs px-2 py-0.5 rounded-lg">was / were</span>
+                            <span class="bg-white border border-blue-300 text-[#0057B8] font-extrabold text-xs px-2 py-0.5 rounded-lg">being / been</span>
+                        </div>
+                    </div>
+
+                    <!-- Branch 2: TO DO (Marshall - Red) -->
+                    <div id="node-do" onclick="selectMindmapBranch('do')" class="mindmap-node cursor-pointer rounded-3xl p-4 border-4 border-[#E4002B] bg-red-50 hover:bg-red-100 transition-all transform hover:-translate-y-1 shadow-md">
+                        <div class="flex items-center justify-between gap-2 mb-2">
+                            <div>
+                                <span class="bg-[#E4002B] text-white text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">PRIMARY #2</span>
+                                <h4 class="font-fredoka text-xl font-bold text-[#E4002B] mt-1">2. Verb "TO DO"</h4>
+                                <p class="text-xs font-extrabold text-red-700 uppercase">Marshall's Rescue</p>
+                            </div>
+                            <div class="w-16 h-16 flex-shrink-0" id="mindmap-portrait-marshall"></div>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mt-2">
+                            <span class="bg-white border border-red-300 text-[#E4002B] font-extrabold text-xs px-2 py-0.5 rounded-lg">do</span>
+                            <span class="bg-white border border-red-300 text-[#E4002B] font-extrabold text-xs px-2 py-0.5 rounded-lg">does</span>
+                            <span class="bg-white border border-red-300 text-[#E4002B] font-extrabold text-xs px-2 py-0.5 rounded-lg">did</span>
+                            <span class="bg-white border border-red-300 text-[#E4002B] font-extrabold text-xs px-2 py-0.5 rounded-lg">don't / didn't</span>
+                        </div>
+                    </div>
+
+                    <!-- Branch 3: TO HAVE (Rocky - Green) -->
+                    <div id="node-have" onclick="selectMindmapBranch('have')" class="mindmap-node cursor-pointer rounded-3xl p-4 border-4 border-[#28A745] bg-green-50 hover:bg-green-100 transition-all transform hover:-translate-y-1 shadow-md">
+                        <div class="flex items-center justify-between gap-2 mb-2">
+                            <div>
+                                <span class="bg-[#28A745] text-white text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">PRIMARY #3</span>
+                                <h4 class="font-fredoka text-xl font-bold text-[#28A745] mt-1">3. Verb "TO HAVE"</h4>
+                                <p class="text-xs font-extrabold text-green-700 uppercase">Rocky's Eco-Team</p>
+                            </div>
+                            <div class="w-16 h-16 flex-shrink-0" id="mindmap-portrait-rocky"></div>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mt-2">
+                            <span class="bg-white border border-green-300 text-[#28A745] font-extrabold text-xs px-2 py-0.5 rounded-lg">have</span>
+                            <span class="bg-white border border-green-300 text-[#28A745] font-extrabold text-xs px-2 py-0.5 rounded-lg">has</span>
+                            <span class="bg-white border border-green-300 text-[#28A745] font-extrabold text-xs px-2 py-0.5 rounded-lg">had</span>
+                            <span class="bg-white border border-green-300 text-[#28A745] font-extrabold text-xs px-2 py-0.5 rounded-lg">having</span>
+                        </div>
+                    </div>
+
+                    <!-- Branch 4: MODALS (Rubble & Zuma - Orange/Yellow) -->
+                    <div id="node-modal" onclick="selectMindmapBranch('modal')" class="mindmap-node cursor-pointer rounded-3xl p-4 border-4 border-[#FF6B00] bg-amber-50 hover:bg-amber-100 transition-all transform hover:-translate-y-1 shadow-md">
+                        <div class="flex items-center justify-between gap-2 mb-2">
+                            <div>
+                                <span class="bg-[#FF6B00] text-white text-[11px] font-extrabold px-2.5 py-0.5 rounded-full">MODAL SQUAD</span>
+                                <h4 class="font-fredoka text-xl font-bold text-[#FF6B00] mt-1">4. MODALS</h4>
+                                <p class="text-xs font-extrabold text-amber-800 uppercase">Rubble & Zuma</p>
+                            </div>
+                            <div class="w-16 h-16 flex-shrink-0" id="mindmap-portrait-rubble"></div>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mt-2">
+                            <span class="bg-white border border-amber-300 text-amber-900 font-extrabold text-xs px-2 py-0.5 rounded-lg">can / could</span>
+                            <span class="bg-white border border-amber-300 text-amber-900 font-extrabold text-xs px-2 py-0.5 rounded-lg">will / would</span>
+                            <span class="bg-white border border-amber-300 text-amber-900 font-extrabold text-xs px-2 py-0.5 rounded-lg">must / should</span>
+                            <span class="bg-white border border-amber-300 text-amber-900 font-extrabold text-xs px-2 py-0.5 rounded-lg">may / might</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INTERACTIVE DETAIL INSPECTOR PANEL (Updates dynamically when a branch is clicked!) -->
+                <div id="mindmap-inspector" class="bg-white border-4 border-[#0057B8] rounded-3xl p-5 sm:p-7 shadow-lg transition-all">
+                    <!-- Populated via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================== -->
+        <!-- SLIDE 2: MODAL POWER LAB & INTERACTIVE SENTENCE RESCUE MACHINE        -->
+        <!-- ===================================================================== -->
+        <section id="slide-2" class="slide-panel pup-pad-frame rounded-3xl p-5 sm:p-8 space-y-8">
+            
+            <!-- PART A: MODAL POWER LAB -->
+            <div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5 border-b-4 border-dashed border-blue-200 pb-4">
+                    <div>
+                        <span class="bg-[#FF6B00] text-white text-xs font-extrabold uppercase px-3 py-1 rounded-full">Rubble, Zuma & Skye's Special Gear</span>
+                        <h2 class="font-fredoka text-3xl sm:text-4xl font-bold text-[#0057B8] mt-1">
+                            Modal Auxiliaries Power Lab
+                        </h2>
+                        <p class="text-sm sm:text-base font-bold text-slate-600">
+                            Modal verbs never change form (no <em>-s</em>, <em>-ed</em>, or <em>-ing</em>) and are always followed by a <strong>Base Verb (V1)</strong>!
+                        </p>
+                    </div>
+                    <div class="bg-[#FFD100] border-2 border-[#FF6B00] rounded-2xl px-4 py-2.5 text-center shadow">
+                        <span class="block text-xs font-extrabold uppercase text-slate-800">Golden Rule</span>
+                        <span class="font-fredoka font-bold text-base sm:text-lg text-[#0057B8]">Modal + Base Verb (V1)</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Modal Selector Pills -->
+                <div class="flex flex-wrap gap-2 mb-5" id="modal-filter-buttons">
+                    <button onclick="selectModalCard('can')" class="modal-pill bg-[#0057B8] text-white font-fredoka font-bold px-4 py-2 rounded-xl border-2 border-[#FFD100] shadow">CAN / COULD (Zuma)</button>
+                    <button onclick="selectModalCard('must')" class="modal-pill bg-white text-[#E4002B] font-fredoka font-bold px-4 py-2 rounded-xl border-2 border-[#E4002B] hover:bg-red-50">MUST / HAVE TO (Chase)</button>
+                    <button onclick="selectModalCard('should')" class="modal-pill bg-white text-[#28A745] font-fredoka font-bold px-4 py-2 rounded-xl border-2 border-[#28A745] hover:bg-green-50">SHOULD / OUGHT TO (Rocky)</button>
+                    <button onclick="selectModalCard('will')" class="modal-pill bg-white text-[#FF6B00] font-fredoka font-bold px-4 py-2 rounded-xl border-2 border-[#FF6B00] hover:bg-orange-50">WILL / WOULD (Rubble)</button>
+                    <button onclick="selectModalCard('may')" class="modal-pill bg-white text-[#FF4F9A] font-fredoka font-bold px-4 py-2 rounded-xl border-2 border-[#FF4F9A] hover:bg-pink-50">MAY / MIGHT (Skye)</button>
+                </div>
+
+                <!-- Dynamic Modal Display Box -->
+                <div id="modal-lab-display" class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
+                    <!-- Filled dynamically by JS -->
+                </div>
+            </div>
+
+            <!-- PART B: INTERACTIVE SENTENCE RESCUE MACHINE (POSITIVE / NEGATIVE / QUESTION) -->
+            <div class="bg-gradient-to-br from-slate-900 via-[#003B73] to-slate-900 text-white rounded-3xl p-5 sm:p-7 border-4 border-[#FFD100] shadow-xl">
+                <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+                    <div>
+                        <span class="bg-[#28A745] text-white text-xs font-extrabold uppercase px-3 py-1 rounded-full">Interactive Grammar Workbench</span>
+                        <h3 class="font-fredoka text-2xl sm:text-3xl font-bold text-[#FFD100] mt-1">
+                            🛠️ Sentence Rescue Machine
+                        </h3>
+                        <p class="text-xs sm:text-sm text-blue-200 font-semibold">
+                            Build a sentence, switch between Positive (+), Negative (-), and Question (?) forms, and check grammar compatibility!
+                        </p>
+                    </div>
+                    <button onclick="speakCurrentBuiltSentence()" class="btn-3d bg-[#FFD100] hover:bg-yellow-300 text-slate-900 font-fredoka font-bold px-4 py-2.5 rounded-2xl border-2 border-white shadow flex items-center gap-2">
+                        <span>🔊 Hear Sentence</span>
+                    </button>
+                </div>
+
+                <!-- Controls Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-5">
+                    <div>
+                        <label class="block text-xs font-extrabold uppercase text-[#FFD100] mb-1">1. Subject (Hero)</label>
+                        <select id="builder-subject" onchange="updateSentenceBuilder()" class="w-full bg-slate-800 border-2 border-[#1E90FF] rounded-xl px-3 py-2.5 font-fredoka font-bold text-white focus:outline-none focus:border-[#FFD100]">
+                            <option value="Chase|singular">Chase (Singular)</option>
+                            <option value="The pups|plural">The pups (Plural)</option>
+                            <option value="I|first">I (First Person)</option>
+                            <option value="Skye|singular">Skye (Singular)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-extrabold uppercase text-[#FFD100] mb-1">2. Auxiliary Verb</label>
+                        <select id="builder-aux" onchange="updateSentenceBuilder()" class="w-full bg-slate-800 border-2 border-[#1E90FF] rounded-xl px-3 py-2.5 font-fredoka font-bold text-white focus:outline-none focus:border-[#FFD100]">
+                            <option value="is">is (To Be - Present)</option>
+                            <option value="are">are (To Be - Present)</option>
+                            <option value="am">am (To Be - Present)</option>
+                            <option value="does">does (To Do - Present)</option>
+                            <option value="do">do (To Do - Present)</option>
+                            <option value="has">has (To Have - Present)</option>
+                            <option value="have">have (To Have - Present)</option>
+                            <option value="can">can (Modal - Ability)</option>
+                            <option value="must">must (Modal - Duty)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-extrabold uppercase text-[#FFD100] mb-1">3. Main Verb Form</label>
+                        <select id="builder-verb" onchange="updateSentenceBuilder()" class="w-full bg-slate-800 border-2 border-[#1E90FF] rounded-xl px-3 py-2.5 font-fredoka font-bold text-white focus:outline-none focus:border-[#FFD100]">
+                            <option value="rescuing|ing">rescuing (Verb-ing)</option>
+                            <option value="rescue|v1">rescue (Base V1)</option>
+                            <option value="rescued|v3">rescued (Past Participle V3)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-extrabold uppercase text-[#FFD100] mb-1">4. Sentence Mode</label>
+                        <div class="grid grid-cols-3 gap-1.5">
+                            <button type="button" onclick="setBuilderMode('pos')" id="mode-pos" class="builder-mode-btn bg-[#28A745] text-white font-fredoka font-bold py-2.5 rounded-xl border-2 border-white text-xs sm:text-sm">+ Pos</button>
+                            <button type="button" onclick="setBuilderMode('neg')" id="mode-neg" class="builder-mode-btn bg-slate-800 text-slate-300 font-fredoka font-bold py-2.5 rounded-xl border-2 border-slate-600 text-xs sm:text-sm">- Neg</button>
+                            <button type="button" onclick="setBuilderMode('que')" id="mode-que" class="builder-mode-btn bg-slate-800 text-slate-300 font-fredoka font-bold py-2.5 rounded-xl border-2 border-slate-600 text-xs sm:text-sm">? Ask</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Output & Grammar Inspector -->
+                <div id="builder-output-box" class="bg-black/40 border-2 border-[#28A745] rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div>
+                        <span id="builder-status-pill" class="inline-block bg-[#28A745] text-white text-xs font-extrabold uppercase px-3 py-1 rounded-full mb-1.5">✅ Valid Rescue Grammar!</span>
+                        <p id="builder-result-text" class="font-fredoka text-2xl sm:text-3xl font-bold text-white">
+                            Chase <span class="text-[#FFD100] underline">is</span> rescuing Chickaletta!
+                        </p>
+                        <p id="builder-feedback-text" class="text-xs sm:text-sm text-blue-200 font-semibold mt-1">
+                            Great match! Singular subject "Chase" + "is" + Verb-ing forms the Present Continuous.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================== -->
+        <!-- SLIDE 3: INTERACTIVE 3D RESCUE FLIP-CARDS (SKYE'S AERIAL DECK)        -->
+        <!-- ===================================================================== -->
+        <section id="slide-3" class="slide-panel pup-pad-frame rounded-3xl p-5 sm:p-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-20 h-20 flex-shrink-0 animate-float" id="skye-slide-portrait"></div>
+                    <div>
+                        <span class="bg-[#FF4F9A] text-white text-xs font-extrabold uppercase px-3.5 py-1 rounded-full border-2 border-[#FFD100]">Skye's Aerial Memory Deck</span>
+                        <h2 class="font-fredoka text-3xl sm:text-4xl font-bold text-[#0057B8] mt-1">
+                            Tap Any Rescue Shield to Flip!
+                        </h2>
+                        <p class="text-sm font-bold text-slate-600">
+                            8 Interactive 3D Cards! Guess the auxiliary verb rule before tapping to flip.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="shuffleFlipCards()" class="btn-3d bg-[#FF6B00] text-white font-fredoka font-bold text-sm px-4 py-2.5 rounded-xl border-2 border-[#FFD100] shadow">
+                        🔀 Shuffle Deck
+                    </button>
+                    <button onclick="toggleAllFlipCards()" class="btn-3d bg-[#0057B8] text-white font-fredoka font-bold text-sm px-4 py-2.5 rounded-xl border-2 border-[#1E90FF] shadow">
+                        🔄 Flip All
+                    </button>
+                </div>
+            </div>
+
+            <!-- 8 Interactive 3D Flip Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="flip-cards-grid">
+                <!-- Generated cleanly via JavaScript -->
+            </div>
+        </section>
+
+        <!-- ===================================================================== -->
+        <!-- SLIDE 4: RESCUE MINI-GAMES (VEHICLE RESCUE CHALLENGE & BADGE QUIZ)    -->
+        <!-- ===================================================================== -->
+        <section id="slide-4" class="slide-panel pup-pad-frame rounded-3xl p-5 sm:p-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-7">
+                
+                <!-- Left: Interactive Fast-Action "Pup-Pad Vehicle Rescue" Mini-Game -->
+                <div class="lg:col-span-6 bg-blue-50 border-4 border-[#1E90FF] rounded-3xl p-5 sm:p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-2">
+                            <span class="bg-[#0057B8] text-[#FFD100] text-xs font-extrabold uppercase px-3 py-1 rounded-full">Mini-Game #1: Rapid Dispatch</span>
+                            <span id="dispatch-streak-badge" class="bg-[#FF6B00] text-white font-fredoka font-bold text-xs px-3 py-1 rounded-full">🔥 Streak: 0</span>
+                        </div>
+                        <h3 class="font-fredoka text-2xl sm:text-3xl font-bold text-[#0057B8]">
+                            🚁 Rapid Pup Dispatch!
+                        </h3>
+                        <p class="text-xs sm:text-sm font-bold text-slate-600 mb-4">
+                            An emergency call just arrived! Tap the matching Auxiliary Verb badge (A, B, C, or D) to launch the right rescue pup!
+                        </p>
+
+                        <!-- Emergency Alert Monitor -->
+                        <div class="bg-slate-900 text-white rounded-2xl p-5 border-4 border-[#FFD100] shadow-inner mb-4 relative">
+                            <div class="flex items-center justify-between text-xs font-extrabold uppercase text-[#FFD100] mb-2">
+                                <span id="dispatch-location">📍 Location: Adventure Bay Bridge</span>
+                                <span id="dispatch-count">Rescues: 0</span>
+                            </div>
+                            <p class="font-fredoka text-xl sm:text-2xl leading-snug mb-2" id="dispatch-prompt">
+                                "Mayor Goodway's balloon _____ floating away into the clouds!"
+                            </p>
+                            <p class="text-xs text-blue-200 font-bold" id="dispatch-hint">
+                                Hint: Singular subject + "-ing" verb happening right now!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Dispatch Auxiliary Choice Buttons -->
+                    <div>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5" id="dispatch-buttons">
+                            <!-- Injected by JS -->
+                        </div>
+                        <div id="dispatch-feedback" class="mt-3 text-center text-sm font-extrabold min-h-[24px] text-[#0057B8]"></div>
+                    </div>
+                </div>
+
+                <!-- Right: Interactive PAW Patrol Official Badge Quiz -->
+                <div class="lg:col-span-6 bg-amber-50 border-4 border-[#FFD100] rounded-3xl p-5 sm:p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-[#E4002B] text-white text-xs font-extrabold uppercase px-3 py-1 rounded-full">Mini-Game #2: Official Exam</span>
+                            <span class="font-fredoka font-bold text-sm text-[#0057B8]" id="quiz-score-badge">Score: 0 / 6</span>
+                        </div>
+                        <h3 class="font-fredoka text-2xl sm:text-3xl font-bold text-slate-900">
+                            🏆 Earn Your PAW Patrol Badge!
+                        </h3>
+
+                        <!-- Quiz Question Card -->
+                        <div class="mt-4 bg-white rounded-2xl p-5 border-2 border-amber-300 shadow-sm">
+                            <p class="text-xs font-extrabold uppercase text-[#FF6B00]" id="quiz-progress-text">Mission Question 1 of 6</p>
+                            <p class="font-fredoka text-lg sm:text-xl font-bold text-slate-800 mt-1 mb-4" id="quiz-question-text">
+                                "_____ Marshall extinguished the fire at Jake's Mountain yet?"
+                            </p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5" id="quiz-options-container">
+                                <!-- Options injected by JS -->
+                            </div>
+
+                            <div id="quiz-feedback" class="hidden mt-4 p-3 rounded-xl text-sm font-bold"></div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between mt-4 pt-2">
+                        <button onclick="resetQuiz()" class="text-xs font-extrabold text-slate-500 hover:text-[#0057B8] underline">
+                            ↻ Restart Quiz
+                        </button>
+                        <button id="quiz-next-btn" onclick="nextQuizQuestion()" class="hidden btn-3d bg-[#28A745] text-white font-fredoka font-bold px-5 py-2.5 rounded-xl border-2 border-white shadow">
+                            Next Question ➔
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- BOTTOM PRESENTATION CONTROLLER BAR (VIDEO GAME DIALOG CONTROLS) -->
+    <footer class="sticky bottom-0 z-30 bg-white/95 backdrop-blur-md border-t-4 border-[#0057B8] py-3 px-4 shadow-[0_-6px_20px_rgba(0,0,0,0.08)]">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+            <button id="prev-slide-btn" onclick="changeSlide(-1)" class="btn-3d bg-[#0057B8] disabled:opacity-40 disabled:pointer-events-none hover:bg-blue-800 text-white font-fredoka font-bold text-sm sm:text-base px-4 sm:px-6 py-2.5 rounded-2xl border-2 border-[#1E90FF] shadow-[0_4px_0_#003B73] flex items-center gap-2">
+                <span>⬅</span>
+                <span>Previous</span>
+            </button>
+
+            <div class="text-center">
+                <span id="slide-indicator-text" class="font-fredoka font-bold text-sm sm:text-lg text-[#0057B8]">
+                    Mission 1 of 5: Lookout Briefing
+                </span>
+                <p class="hidden sm:block text-[11px] font-bold text-slate-500">
+                    Tip: Use ⬅ / ➡ Arrow Keys or Click Any of the 7 Heroes in the Header!
+                </p>
+            </div>
+
+            <button id="next-slide-btn" onclick="changeSlide(1)" class="btn-3d bg-[#28A745] disabled:opacity-40 disabled:pointer-events-none hover:bg-green-600 text-white font-fredoka font-bold text-sm sm:text-base px-4 sm:px-6 py-2.5 rounded-2xl border-2 border-[#FFD100] shadow-[0_4px_0_#166534] flex items-center gap-2">
+                <span>Next</span>
+                <span>➡</span>
+            </button>
+        </div>
+    </footer>
+
+    <!-- ===================================================================== -->
+    <!-- JAVASCRIPT ENGINE: 7 CUSTOM SVG CHARACTERS, AUDIO, MINDMAP & GAMES    -->
+    <!-- ===================================================================== -->
+    <script>
+        /* =========================================================================
+           1. DISTINCT CUSTOM SVG CHARACTER ILLUSTRATIONS FOR ALL 7 HEROES
+              (Each container carries data-pup="<name>" so you can also swap PNGs!)
+           ========================================================================= */
+        const pupSVGs = {
+            ryder: `
+                <svg viewBox="0 0 120 120" class="w-full h-full drop-shadow" role="img" aria-label="Ryder PAW Patrol Mission Leader">
+                    <circle cx="60" cy="60" r="56" fill="#E4002B" stroke="#FFD100" stroke-width="5"/>
+                    <!-- Vest & Shirt -->
+                    <path d="M26 108 C28 84 92 84 94 108 Z" fill="#FFFFFF"/>
+                    <path d="M32 108 L40 84 L52 84 L52 108 Z" fill="#0057B8"/>
+                    <path d="M88 108 L80 84 L68 84 L68 108 Z" fill="#0057B8"/>
+                    <!-- Face -->
+                    <circle cx="60" cy="56" r="24" fill="#FCD5B5"/>
+                    <!-- Spiky Brown Hair -->
+                    <path d="M35 50 C32 30 48 16 64 20 C76 14 88 26 85 48 C80 34 68 32 60 36 C50 30 40 36 35 50 Z" fill="#4A2C18"/>
+                    <polygon points="56,22 65,10 70,24" fill="#4A2C18"/>
+                    <!-- Eyes & Smile -->
+                    <circle cx="51" cy="55" r="3.2" fill="#1E293B"/>
+                    <circle cx="69" cy="55" r="3.2" fill="#1E293B"/>
+                    <path d="M52 66 Q60 73 68 66" fill="none" stroke="#991B1B" stroke-width="3" stroke-linecap="round"/>
+                    <!-- Mini Glowing Pup-Pad -->
+                    <rect x="74" y="76" width="22" height="28" rx="4" fill="#1E90FF" stroke="#FFD100" stroke-width="2.5"/>
+                    <circle cx="85" cy="90" r="4" fill="#FFD100"/>
+                </svg>`,
+            chase: `
+                <svg viewBox="0 0 120 120" class="w-full h-full drop-shadow" role="img" aria-label="Chase German Shepherd Police Pup">
+                    <circle cx="60" cy="60" r="56" fill="#0057B8" stroke="#FFD100" stroke-width="5"/>
+                    <!-- German Shepherd Pointy Ears -->
+                    <polygon points="30,48 22,14 48,34" fill="#5C3A21" stroke="#3B2313" stroke-width="2"/>
+                    <polygon points="90,48 98,14 72,34" fill="#5C3A21" stroke="#3B2313" stroke-width="2"/>
+                    <!-- Head & Tan Muzzle -->
+                    <circle cx="60" cy="64" r="26" fill="#6B4423"/>
+                    <ellipse cx="60" cy="73" rx="16" ry="13" fill="#E6B88A"/>
+                    <!-- Police Cap -->
+                    <path d="M34 45 Q60 28 86 45 L82 52 Q60 44 38 52 Z" fill="#003B73" stroke="#FFD100" stroke-width="2"/>
+                    <rect x="36" y="48" width="48" height="5" rx="2" fill="#111827"/>
+                    <polygon points="60,33 63,39 69,39 64,43 66,49 60,45 54,49 56,43 51,39 57,39" fill="#FFD100"/>
+                    <!-- Eyes, Nose & Smile -->
+                    <circle cx="49" cy="60" r="3.5" fill="#111827"/><circle cx="50" cy="59" r="1.2" fill="#FFF"/>
+                    <circle cx="71" cy="60" r="3.5" fill="#111827"/><circle cx="72" cy="59" r="1.2" fill="#FFF"/>
+                    <ellipse cx="60" cy="69" rx="5.5" ry="4" fill="#111827"/>
+                    <path d="M52 77 Q60 83 68 77" fill="none" stroke="#3B2313" stroke-width="2.5" stroke-linecap="round"/>
+                    <!-- Collar & Gold Star Badge -->
+                    <rect x="40" y="89" width="40" height="7" rx="3" fill="#003B73"/>
+                    <circle cx="60" cy="95" r="7" fill="#FFD100" stroke="#FFF" stroke-width="1.5"/>
+                </svg>`,
+            marshall: `
+                <svg viewBox="0 0 120 120" class="w-full h-full drop-shadow" role="img" aria-label="Marshall Dalmatian Fire Pup">
+                    <circle cx="60" cy="60" r="56" fill="#E4002B" stroke="#FFFFFF" stroke-width="5"/>
+                    <!-- Floppy Dalmatian Ears with Spots -->
+                    <ellipse cx="30" cy="64" rx="11" ry="20" transform="rotate(14 30 64)" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+                    <circle cx="28" cy="60" r="4" fill="#1E293B"/><circle cx="32" cy="72" r="3" fill="#1E293B"/>
+                    <ellipse cx="90" cy="64" rx="11" ry="20" transform="rotate(-14 90 64)" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+                    <circle cx="91" cy="62" r="4" fill="#1E293B"/>
+                    <!-- White Dalmatian Face & Spots -->
+                    <circle cx="60" cy="65" r="25" fill="#FFFFFF"/>
+                    <circle cx="43" cy="55" r="3.2" fill="#1E293B"/><circle cx="78" cy="70" r="2.8" fill="#1E293B"/>
+                    <!-- Red Fire Helmet -->
+                    <path d="M32 48 C34 26 86 26 88 48 Z" fill="#E4002B" stroke="#FFD100" stroke-width="2.5"/>
+                    <rect x="28" y="46" width="64" height="6" rx="3" fill="#B91C1C"/>
+                    <polygon points="60,30 66,38 60,44 54,38" fill="#FFD100"/>
+                    <!-- Eyes, Nose & Happy Tongue -->
+                    <circle cx="50" cy="61" r="3.5" fill="#1E293B"/><circle cx="70" cy="61" r="3.5" fill="#1E293B"/>
+                    <ellipse cx="60" cy="70" rx="5.5" ry="4" fill="#1E293B"/>
+                    <path d="M55 77 Q60 86 65 77 Z" fill="#FF4F9A"/>
+                    <!-- Yellow Collar -->
+                    <rect x="42" y="90" width="36" height="7" rx="3" fill="#FFD100"/>
+                </svg>`,
+            rocky: `
+                <svg viewBox="0 0 120 120" class="w-full h-full drop-shadow" role="img" aria-label="Rocky Mixed-Breed Eco Pup">
+                    <circle cx="60" cy="60" r="56" fill="#28A745" stroke="#FFD100" stroke-width="5"/>
+                    <!-- Scruffy Ears -->
+                    <polygon points="32,54 20,34 44,42" fill="#64748B"/>
+                    <polygon points="88,54 100,34 76,42" fill="#64748B"/>
+                    <!-- Grey Face & White Muzzle + Eye Patch -->
+                    <circle cx="60" cy="65" r="25" fill="#94A3B8"/>
+                    <ellipse cx="48" cy="61" rx="9" ry="8" fill="#475569"/>
+                    <ellipse cx="60" cy="73" rx="15" ry="12" fill="#F8FAFC"/>
+                    <!-- Green Recycling Cap -->
+                    <path d="M36 47 C38 29 82 29 84 47 Z" fill="#15803D" stroke="#FFD100" stroke-width="2"/>
+                    <rect x="42" y="45" width="44" height="5" rx="2.5" fill="#22C55E"/>
+                    <circle cx="60" cy="37" r="5" fill="#FFFFFF"/>
+                    <!-- Eyes & Nose -->
+                    <circle cx="49" cy="61" r="3.5" fill="#111827"/>
+                    <circle cx="71" cy="61" r="3.5" fill="#111827"/>
+                    <ellipse cx="60" cy="69" rx="5" ry="3.8" fill="#111827"/>
+                    <path d="M53 76 Q60 82 67 76" fill="none" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+                    <!-- Orange Collar -->
+                    <rect x="42" y="90" width="36" height="7" rx="3" fill="#FF6B00"/>
+                </svg>`,
+            rubble: `
+                <svg viewBox="0 0 120 120" class="w-full h-full drop-shadow" role="img" aria-label="Rubble English Bulldog Construction Pup">
+                    <circle cx="60" cy="60" r="56" fill="#FFD100" stroke="#FF6B00" stroke-width="5"/>
+                    <!-- Bulldog Ears -->
+                    <ellipse cx="32" cy="52" rx="9" ry="12" fill="#92400E"/>
+                    <ellipse cx="88" cy="52" rx="9" ry="12" fill="#92400E"/>
+                    <!-- Broad Bulldog Face & White Snout -->
+                    <ellipse cx="60" cy="66" rx="28" ry="24" fill="#B45309"/>
+                    <ellipse cx="60" cy="74" rx="18" ry="13" fill="#FEF3C7"/>
+                    <!-- Yellow Construction Hard Hat -->
+                    <path d="M33 47 C35 25 85 25 87 47 Z" fill="#FACC15" stroke="#B45309" stroke-width="2.5"/>
+                    <rect x="29" y="45" width="62" height="6" rx="3" fill="#EAB308"/>
+                    <rect x="55" y="28" width="10" height="17" rx="3" fill="#FF6B00"/>
+                    <!-- Eyes, Nose & Cute Bulldog Underbite Tooth -->
+                    <circle cx="48" cy="61" r="3.5" fill="#111827"/>
+                    <circle cx="72" cy="61" r="3.5" fill="#111827"/>
+                    <ellipse cx="60" cy="69" rx="6" ry="4" fill="#111827"/>
+                    <path d="M50 78 Q60 83 70 78" fill="none" stroke="#78350F" stroke-width="2.5"/>
+                    <polygon points="53,78 56,73 59,78" fill="#FFFFFF"/>
+                </svg>`,
+            zuma: `
+                <svg viewBox="0 0 120 120" class="w-full h-full drop-shadow" role="img" aria-label="Zuma Chocolate Labrador Water Rescue Pup">
+                    <circle cx="60" cy="60" r="56" fill="#FF6B00" stroke="#0057B8" stroke-width="5"/>
+                    <!-- Floppy Chocolate Lab Ears -->
+                    <ellipse cx="31" cy="66" rx="10" ry="18" transform="rotate(12 31 66)" fill="#451A03"/>
+                    <ellipse cx="89" cy="66" rx="10" ry="18" transform="rotate(-12 89 66)" fill="#451A03"/>
+                    <!-- Chocolate Brown Face -->
+                    <circle cx="60" cy="65" r="25" fill="#78350F"/>
+                    <ellipse cx="60" cy="74" rx="15" ry="11" fill="#92400E"/>
+                    <!-- Orange Water Helmet & Diving Goggles -->
+                    <path d="M34 47 C36 27 84 27 86 47 Z" fill="#FF6B00" stroke="#FFFFFF" stroke-width="2"/>
+                    <rect x="37" y="41" width="20" height="11" rx="5" fill="#38BDF8" stroke="#1E293B" stroke-width="2.5"/>
+                    <rect x="63" y="41" width="20" height="11" rx="5" fill="#38BDF8" stroke="#1E293B" stroke-width="2.5"/>
+                    <!-- Eyes & Nose -->
+                    <circle cx="49" cy="62" r="3.5" fill="#111827"/>
+                    <circle cx="71" cy="62" r="3.5" fill="#111827"/>
+                    <ellipse cx="60" cy="70" rx="5.5" ry="4" fill="#111827"/>
+                    <path d="M52 77 Q60 83 68 77" fill="none" stroke="#FEF3C7" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>`,
+            skye: `
+                <svg viewBox="0 0 120 120" class="w-full h-full drop-shadow" role="img" aria-label="Skye Cockapoo Aviation Pup">
+                    <circle cx="60" cy="60" r="56" fill="#FF4F9A" stroke="#FFD100" stroke-width="5"/>
+                    <!-- Fluffy Cockapoo Ears -->
+                    <ellipse cx="30" cy="68" rx="12" ry="20" transform="rotate(15 30 68)" fill="#D97706"/>
+                    <ellipse cx="90" cy="68" rx="12" ry="20" transform="rotate(-15 90 68)" fill="#D97706"/>
+                    <!-- Golden Cream Face -->
+                    <circle cx="60" cy="65" r="24" fill="#FDE68A"/>
+                    <ellipse cx="60" cy="73" rx="14" ry="11" fill="#FEF3C7"/>
+                    <!-- Pink Aviator Helmet & Flight Goggles -->
+                    <path d="M35 47 C37 27 83 27 85 47 Z" fill="#EC4899" stroke="#FFD100" stroke-width="2"/>
+                    <ellipse cx="48" cy="44" rx="10" ry="7" fill="#E0F2FE" stroke="#FFD100" stroke-width="2.5"/>
+                    <ellipse cx="72" cy="44" rx="10" ry="7" fill="#E0F2FE" stroke="#FFD100" stroke-width="2.5"/>
+                    <!-- Big Expressive Eyes & Nose -->
+                    <circle cx="49" cy="61" r="3.8" fill="#831843"/><circle cx="50" cy="60" r="1.3" fill="#FFF"/>
+                    <circle cx="71" cy="61" r="3.8" fill="#831843"/><circle cx="72" cy="60" r="1.3" fill="#FFF"/>
+                    <ellipse cx="60" cy="69" rx="4.5" ry="3.5" fill="#78350F"/>
+                    <path d="M53 76 Q60 82 67 76" fill="none" stroke="#BE185D" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>`
+        };
+
+        /* =========================================================================
+           2. WEB AUDIO API SOUND EFFECTS FOR ALL 7 HEROES (Zero External Files!)
+           ========================================================================= */
+        let soundEnabled = true;
+        let audioCtx = null;
+
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        }
+
+        function toggleSound() {
+            soundEnabled = !soundEnabled;
+            document.getElementById('sound-icon').textContent = soundEnabled ? '🔊' : '🔇';
+        }
+
+        function toggleMotion() {
+            document.body.classList.toggle('reduce-motion');
+            const isReduced = document.body.classList.contains('reduce-motion');
+            document.getElementById('motion-icon').textContent = isReduced ? '⏸️' : '☁️';
+        }
+
+        function playPupSound(type = 'default') {
+            if (!soundEnabled) return;
+            try {
+                initAudio();
+                const now = audioCtx.currentTime;
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                if (type === 'chase') {
+                    // Police siren chirp
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(523.25, now);
+                    osc.frequency.exponentialRampToValueAtTime(880, now + 0.14);
+                    gain.gain.setValueAtTime(0.18, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.24);
+                    osc.start(now); osc.stop(now + 0.24);
+                } else if (type === 'marshall') {
+                    // Fire truck two-tone horn
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(440, now);
+                    osc.frequency.setValueAtTime(587.33, now + 0.11);
+                    gain.gain.setValueAtTime(0.18, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.26);
+                    osc.start(now); osc.stop(now + 0.26);
+                } else if (type === 'rocky') {
+                    // Eco wrench metallic double-ding
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(987.77, now);
+                    osc.frequency.setValueAtTime(1318.51, now + 0.08);
+                    gain.gain.setValueAtTime(0.15, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.22);
+                    osc.start(now); osc.stop(now + 0.22);
+                } else if (type === 'rubble') {
+                    // Construction bulldozer low beep
+                    osc.type = 'square';
+                    osc.frequency.setValueAtTime(329.63, now);
+                    osc.frequency.setValueAtTime(392.00, now + 0.1);
+                    gain.gain.setValueAtTime(0.1, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.22);
+                    osc.start(now); osc.stop(now + 0.22);
+                } else if (type === 'zuma') {
+                    // Hovercraft sonar bubble sweep
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(350, now);
+                    osc.frequency.exponentialRampToValueAtTime(740, now + 0.18);
+                    gain.gain.setValueAtTime(0.16, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.22);
+                    osc.start(now); osc.stop(now + 0.22);
+                } else if (type === 'skye') {
+                    // High aerial propeller chime
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(783.99, now);
+                    osc.frequency.exponentialRampToValueAtTime(1174.66, now + 0.16);
+                    gain.gain.setValueAtTime(0.16, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.24);
+                    osc.start(now); osc.stop(now + 0.24);
+                } else if (type === 'success') {
+                    // Celebratory arpeggio
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(523.25, now);
+                    osc.frequency.setValueAtTime(659.25, now + 0.08);
+                    osc.frequency.setValueAtTime(783.99, now + 0.16);
+                    osc.frequency.setValueAtTime(1046.50, now + 0.24);
+                    gain.gain.setValueAtTime(0.2, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.45);
+                    osc.start(now); osc.stop(now + 0.45);
+                } else {
+                    // Ryder Pup-Pad Call
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(587.33, now);
+                    osc.frequency.exponentialRampToValueAtTime(880, now + 0.15);
+                    gain.gain.setValueAtTime(0.15, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.22);
+                    osc.start(now); osc.stop(now + 0.22);
+                }
+            } catch (e) {
+                console.warn('Audio playback skipped:', e);
+            }
+        }
+
+        /* =========================================================================
+           3. CHARACTER SPEECH TOAST & INTERACTION SYSTEM (ALL 7 HEROES)
+           ========================================================================= */
+        const pupProfiles = {
+            ryder: {
+                name: 'Ryder (Mission Leader)',
+                role: 'Command & Overview',
+                slide: 0,
+                badgeBg: '#E4002B',
+                quote: '"No job is too big, no pup is too small! Auxiliary verbs help main verbs complete every grammar mission!"'
+            },
+            chase: {
+                name: 'Chase (Police Pup)',
+                role: 'Verb "TO BE"',
+                slide: 1,
+                badgeBg: '#0057B8',
+                quote: '"Chase is on the case! Use AM, IS, ARE, WAS, WERE + Verb-ing to show actions happening right now!"'
+            },
+            marshall: {
+                name: 'Marshall (Fire Pup)',
+                role: 'Verb "TO DO"',
+                slide: 1,
+                badgeBg: '#E4002B',
+                quote: '"I\'m fired up! Use DO, DOES, and DID to ask rescue questions and make negative sentences!"'
+            },
+            rocky: {
+                name: 'Rocky (Eco Pup)',
+                role: 'Verb "TO HAVE"',
+                slide: 1,
+                badgeBg: '#28A745',
+                quote: '"Don\'t lose it, reuse it! Combine HAVE, HAS, or HAD with a Past Participle (V3) for Perfect Tenses!"'
+            },
+            rubble: {
+                name: 'Rubble (Construction Pup)',
+                role: 'Modals: MUST / WILL',
+                slide: 2,
+                badgeBg: '#FFD100',
+                quote: '"Rubble on the double! Modals like MUST and WILL never add -s and always pair with a Base Verb (V1)!"'
+            },
+            zuma: {
+                name: 'Zuma (Water Rescue Pup)',
+                role: 'Modals: CAN / COULD',
+                slide: 2,
+                badgeBg: '#FF6B00',
+                quote: '"Let\'s dive in! Use CAN and COULD to show rescue abilities and polite requests!"'
+            },
+            skye: {
+                name: 'Skye (Aviation Pup)',
+                role: '3D Flip-Cards & MAY/MIGHT',
+                slide: 3,
+                badgeBg: '#FF4F9A',
+                quote: '"This pup\'s gotta fly! Tap any 3D rescue shield to flip it and master Auxiliary Verbs!"'
+            }
+        };
+
+        let toastTimeout = null;
+
+        function interactPup(pupKey, targetSlide = null) {
+            playPupSound(pupKey);
+
+            // Animate any matching character cards on screen
+            document.querySelectorAll(`[data-pup-card="${pupKey}"]`).forEach(el => {
+                el.classList.remove('animate-pup-jump');
+                void el.offsetWidth; // trigger reflow
+                el.classList.add('animate-pup-jump');
+            });
+
+            if (targetSlide !== null) {
+                goToSlide(targetSlide, false);
+                if (pupKey === 'chase') selectMindmapBranch('be', false);
+                if (pupKey === 'marshall') selectMindmapBranch('do', false);
+                if (pupKey === 'rocky') selectMindmapBranch('have', false);
+                if (pupKey === 'rubble') { selectMindmapBranch('modal', false); selectModalCard('must', false); }
+                if (pupKey === 'zuma') { selectModalCard('can', false); }
+            }
+
+            const pup = pupProfiles[pupKey] || pupProfiles.ryder;
+            const toast = document.getElementById('pup-speech-toast');
+            const avatar = document.getElementById('toast-avatar');
+            document.getElementById('toast-name').textContent = pup.name;
+            document.getElementById('toast-message').textContent = pup.quote;
+            avatar.innerHTML = pupSVGs[pupKey] || pupSVGs.ryder;
+
+            toast.classList.remove('translate-y-36', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.add('translate-y-36', 'opacity-0');
+                toast.classList.remove('translate-y-0', 'opacity-100');
+            }, 4400);
+        }
+
+        function renderAllCharacterPortraits() {
+            const keys = ['ryder', 'chase', 'marshall', 'rocky', 'rubble', 'zuma', 'skye'];
+            
+            // 1. Header Pup-Pad Roster
+            const headerRoster = document.getElementById('header-pup-roster');
+            headerRoster.innerHTML = keys.map(k => {
+                const p = pupProfiles[k];
+                const label = k.charAt(0).toUpperCase() + k.slice(1);
+                return `
+                    <button onclick="interactPup('${k}', ${p.slide})" title="${p.name}: ${p.role}" class="flex items-center gap-1.5 bg-white/15 hover:bg-white/30 border-2 border-[#FFD100] rounded-full pr-2.5 pl-1 py-0.5 transition transform hover:scale-105 active:scale-95 flex-shrink-0">
+                        <span class="w-7 h-7 rounded-full overflow-hidden block">${pupSVGs[k]}</span>
+                        <span class="text-xs font-extrabold hidden lg:inline">${label}</span>
+                    </button>
+                `;
+            }).join('');
+
+            // 2. Slide 0 Ryder Spotlight
+            const ryderSpot = document.getElementById('ryder-hero-portrait');
+            if (ryderSpot) ryderSpot.innerHTML = pupSVGs.ryder;
+
+            // 3. Slide 0 7-Hero Interactive Squad Grid
+            const briefingGrid = document.getElementById('briefing-hero-grid');
+            if (briefingGrid) {
+                briefingGrid.innerHTML = keys.map(k => {
+                    const p = pupProfiles[k];
+                    const label = k.toUpperCase();
+                    return `
+                        <div data-pup="${k}" data-pup-card="${k}" onclick="interactPup('${k}', ${p.slide})" class="cursor-pointer bg-white hover:bg-blue-50 border-3 border-blue-200 hover:border-[#0057B8] rounded-2xl p-3 text-center shadow-sm hover:shadow-md transition transform hover:-translate-y-1">
+                            <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-1.5">${pupSVGs[k]}</div>
+                            <h4 class="font-fredoka font-bold text-sm sm:text-base text-slate-900">${label}</h4>
+                            <span class="inline-block mt-0.5 text-[10px] font-extrabold text-white px-2 py-0.5 rounded-full" style="background-color: ${p.badgeBg === '#FFD100' ? '#FF6B00' : p.badgeBg}">${p.role}</span>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // 4. Mindmap & Slide 3 Portraits
+            ['chase', 'marshall', 'rocky', 'rubble'].forEach(k => {
+                const el = document.getElementById(`mindmap-portrait-${k}`);
+                if (el) el.innerHTML = pupSVGs[k];
+            });
+            const skyeEl = document.getElementById('skye-slide-portrait');
+            if (skyeEl) skyeEl.innerHTML = pupSVGs.skye;
+        }
+
+        /* =========================================================================
+           4. SLIDE NAVIGATION CONTROLLER (WITH KEYBOARD ARROWS)
+           ========================================================================= */
+        let currentSlide = 0;
+        const totalSlides = 5;
+        const slideTitles = [
+            'Mission 1 of 5: Lookout Briefing & 7 Heroes',
+            'Mission 2 of 5: Interactive Auxiliary Mindmap',
+            'Mission 3 of 5: Modals & Sentence Rescue Machine',
+            'Mission 4 of 5: Skye\'s 3D Rescue Flip-Cards',
+            'Mission 5 of 5: Rapid Dispatch & PAW Badge Quiz'
+        ];
+
+        function goToSlide(index, withSound = true) {
+            if (index < 0 || index >= totalSlides) return;
+            currentSlide = index;
+            if (withSound) playPupSound('default');
+
+            document.querySelectorAll('.slide-panel').forEach((panel, idx) => {
+                panel.classList.toggle('active', idx === currentSlide);
+            });
+
+            document.querySelectorAll('.slide-tab').forEach((tab, idx) => {
+                if (idx === currentSlide) {
+                    tab.className = 'slide-tab px-4 py-2 rounded-2xl font-fredoka font-bold text-sm sm:text-base border-2 transition-all shadow-md flex items-center gap-2 bg-[#0057B8] text-white border-[#FFD100] scale-105';
+                } else {
+                    tab.className = 'slide-tab px-4 py-2 rounded-2xl font-fredoka font-bold text-sm sm:text-base border-2 transition-all shadow-sm flex items-center gap-2 bg-white text-[#0057B8] border-blue-200 hover:border-[#0057B8]';
+                }
+            });
+
+            const progressPercent = ((currentSlide + 1) / totalSlides) * 100;
+            document.getElementById('mission-progress-bar').style.width = `${progressPercent}%`;
+            document.getElementById('slide-indicator-text').textContent = slideTitles[currentSlide];
+
+            document.getElementById('prev-slide-btn').disabled = (currentSlide === 0);
+            document.getElementById('next-slide-btn').disabled = (currentSlide === totalSlides - 1);
+        }
+
+        function changeSlide(delta) {
+            goToSlide(currentSlide + delta);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (['INPUT', 'SELECT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+            if (e.key === 'ArrowRight') changeSlide(1);
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+        });
+
+        /* =========================================================================
+           5. INTERACTIVE MINDMAP BRANCH INSPECTOR
+           ========================================================================= */
+        const mindmapData = {
+            be: {
+                title: 'Branch 1: Verb "TO BE" (Chase\'s Police Patrol)',
+                badgeColor: '#0057B8',
+                borderColor: '#1E90FF',
+                forms: ['am', 'is', 'are', 'was', 'were', 'being', 'been'],
+                uses: [
+                    {
+                        label: '1. Continuous / Progressive Tenses',
+                        formula: 'Subject + be (am/is/are/was/were) + Verb-ing',
+                        example: 'Chase <strong>is tracking</strong> Mayor Humdinger\'s footprints!'
+                    },
+                    {
+                        label: '2. Passive Voice Constructions',
+                        formula: 'Subject + be + Past Participle (V3)',
+                        example: 'The broken bridge <strong>was repaired</strong> by Rubble.'
+                    }
+                ],
+                tip: 'Chase\'s Clue: Use "am" with I; "is/was" with singular subjects (he, she, it, Chase); "are/were" with plural subjects (we, you, they, the pups).'
+            },
+            do: {
+                title: 'Branch 2: Verb "TO DO" (Marshall\'s Fire Rescue)',
+                badgeColor: '#E4002B',
+                borderColor: '#E4002B',
+                forms: ['do', 'does', 'did', 'don\'t', 'doesn\'t', 'didn\'t'],
+                uses: [
+                    {
+                        label: '1. Forming Questions (Simple Present & Past)',
+                        formula: 'Do / Does / Did + Subject + Base Verb (V1)?',
+                        example: '<strong>Does</strong> Marshall <strong>have</strong> his water cannon ready?'
+                    },
+                    {
+                        label: '2. Forming Negative Sentences & Emphasis',
+                        formula: 'Subject + do/does/did + not + Base Verb (V1)',
+                        example: 'Cats <strong>do not</strong> like getting wet, but Marshall <strong>did</strong> save Cali!'
+                    }
+                ],
+                tip: 'Marshall\'s Clue: Whenever "does" or "did" enters the sentence, the main verb drops its -s or -ed and returns to Base Form (V1)!'
+            },
+            have: {
+                title: 'Branch 3: Verb "TO HAVE" (Rocky\'s Eco-Team)',
+                badgeColor: '#28A745',
+                borderColor: '#28A745',
+                forms: ['have', 'has', 'had', 'having'],
+                uses: [
+                    {
+                        label: '1. Present Perfect Tense (Completed Actions)',
+                        formula: 'Subject + have / has + Past Participle (V3)',
+                        example: 'Rocky <strong>has collected</strong> all the recycled parts for the boat!'
+                    },
+                    {
+                        label: '2. Past Perfect Tense (Earlier Past Action)',
+                        formula: 'Subject + had + Past Participle (V3)',
+                        example: 'The pups <strong>had finished</strong> training before the alarm rang.'
+                    }
+                ],
+                tip: 'Rocky\'s Clue: Use "has" for singular third-person subjects (he, she, it, Rocky) and "have" for I, you, we, they!'
+            },
+            modal: {
+                title: 'Branch 4: MODAL AUXILIARIES (Rubble & Zuma)',
+                badgeColor: '#FF6B00',
+                borderColor: '#FF6B00',
+                forms: ['can', 'could', 'will', 'would', 'shall', 'should', 'may', 'might', 'must'],
+                uses: [
+                    {
+                        label: '1. Ability, Permission & Possibility',
+                        formula: 'Subject + Modal + Base Verb (V1)',
+                        example: 'Zuma <strong>can</strong> dive deep underwater, and Skye <strong>might</strong> spot the whale!'
+                    },
+                    {
+                        label: '2. Obligation, Advice & Future Rescue Plans',
+                        formula: 'Subject + must / should / will + Base Verb (V1)',
+                        example: 'We <strong>must</strong> hurry! Ryder <strong>will</strong> lead the mission.'
+                    }
+                ],
+                tip: 'Rubble\'s Clue: Modals are super strong! Never add "-s" (never say "he cans") and never put "to" right after them (never say "must to go").'
+            },
+            all: {
+                title: 'Complete Lookout Overview: Primary vs. Modal Auxiliaries',
+                badgeColor: '#0057B8',
+                borderColor: '#FFD100',
+                forms: ['BE (am, is, are...)', 'DO (do, does, did)', 'HAVE (have, has, had)', 'MODALS (can, will, must...)'],
+                uses: [
+                    {
+                        label: 'Primary Auxiliaries (Be, Do, Have)',
+                        formula: 'Change form for tense/subject AND can also act as main verbs!',
+                        example: 'Marshall <strong>is</strong> a Dalmatian (Main) vs. Marshall <strong>is</strong> running (Auxiliary).'
+                    },
+                    {
+                        label: 'Modal Auxiliaries (Can, Must, Should, Will...)',
+                        formula: 'Always stay in one form and express attitude, necessity, or time.',
+                        example: 'Every pup <strong>must</strong> work together to save Adventure Bay!'
+                    }
+                ],
+                tip: 'Click any of the 4 colored Pup Nodes above to inspect each branch in detail!'
+            }
+        };
+
+        function selectMindmapBranch(branchKey, withSound = true) {
+            if (withSound) playPupSound('default');
+            const data = mindmapData[branchKey] || mindmapData.be;
+
+            document.querySelectorAll('.mindmap-node').forEach(node => {
+                node.classList.remove('ring-4', 'scale-[1.02]');
+            });
+            const activeNode = document.getElementById(`node-${branchKey}`);
+            if (activeNode) {
+                activeNode.classList.add('ring-4', 'scale-[1.02]');
+            }
+
+            const inspector = document.getElementById('mindmap-inspector');
+            inspector.style.borderColor = data.borderColor;
+            inspector.innerHTML = `
+                <div class="flex flex-wrap items-center justify-between gap-2 pb-3 mb-4 border-b-2 border-slate-100">
+                    <h4 class="font-fredoka text-xl sm:text-2xl font-bold" style="color: ${data.badgeColor}">${data.title}</h4>
+                    <div class="flex flex-wrap gap-1.5">
+                        ${data.forms.map(f => `<span class="text-xs font-extrabold px-2.5 py-1 rounded-full text-white" style="background-color: ${data.badgeColor}">${f}</span>`).join('')}
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    ${data.uses.map(u => `
+                        <div class="bg-slate-50 rounded-2xl p-4 border-2 border-slate-200">
+                            <div class="font-fredoka font-bold text-base text-slate-800 mb-1">${u.label}</div>
+                            <div class="text-xs font-extrabold text-[#0057B8] bg-blue-100/70 inline-block px-2.5 py-1 rounded-lg mb-2">${u.formula}</div>
+                            <p class="text-sm font-bold text-slate-700">🐾 "${u.example}"</p>
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="bg-[#FFD100]/25 border-2 border-[#FFD100] rounded-2xl px-4 py-3 text-xs sm:text-sm font-extrabold text-slate-800">
+                    💡 ${data.tip}
+                </div>
+            `;
+        }
+
+        /* =========================================================================
+           6. MODAL POWER LAB & SENTENCE RESCUE MACHINE (SLIDE 2)
+           ========================================================================= */
+        const modalLabData = {
+            can: {
+                pair: 'CAN & COULD',
+                pupKey: 'zuma',
+                pup: 'Zuma (Water Rescue)',
+                color: '#FF6B00',
+                function: 'Ability, Skill & Polite Requests',
+                presentRule: 'Use CAN for present ability or permission.',
+                presentEx: 'Zuma <strong>can</strong> steer his hovercraft through giant waves!',
+                pastRule: 'Use COULD for past ability or extra-polite requests.',
+                pastEx: '<strong>Could</strong> you pass the Pup-Pad to Ryder, please?'
+            },
+            must: {
+                pair: 'MUST & HAVE TO',
+                pupKey: 'chase',
+                pup: 'Chase (Police Chief)',
+                color: '#0057B8',
+                function: 'Strong Obligation & Urgent Necessity',
+                presentRule: 'Use MUST when a rule or rescue emergency is 100% necessary.',
+                presentEx: 'All pups <strong>must</strong> report to the Lookout Tower immediately!',
+                pastRule: 'Use MUST NOT (mustn\'t) for strict prohibition.',
+                pastEx: 'Citizens <strong>must not</strong> cross the police tape during a rescue.'
+            },
+            should: {
+                pair: 'SHOULD & OUGHT TO',
+                pupKey: 'rocky',
+                pup: 'Rocky (Eco Safety)',
+                color: '#28A745',
+                function: 'Helpful Advice & Good Recommendations',
+                presentRule: 'Use SHOULD to give smart safety tips or advice.',
+                presentEx: 'You <strong>should</strong> recycle plastic bottles to keep Adventure Bay clean!',
+                pastRule: 'Use SHOULD NOT (shouldn\'t) to advise against something.',
+                pastEx: 'Mayor Goodway <strong>shouldn\'t</strong> leave Chickaletta unattended!'
+            },
+            will: {
+                pair: 'WILL & WOULD',
+                pupKey: 'rubble',
+                pup: 'Rubble (Construction Rig)',
+                color: '#D97706',
+                function: 'Future Promises & Hypothetical Missions',
+                presentRule: 'Use WILL for instant rescue decisions and future promises.',
+                presentEx: 'Don\'t worry, Alex! Rubble <strong>will</strong> clear the rocks from the road!',
+                pastRule: 'Use WOULD for imaginary situations or polite offers.',
+                pastEx: 'Rubble <strong>would</strong> love a big bowl of pup treats after digging.'
+            },
+            may: {
+                pair: 'MAY & MIGHT',
+                pupKey: 'skye',
+                pup: 'Skye (Sky Scout)',
+                color: '#FF4F9A',
+                function: 'Possibility & Formal Permission',
+                presentRule: 'Use MAY / MIGHT when something is possible (50/50 chance).',
+                presentEx: 'Dark clouds are gathering—a storm <strong>might</strong> hit Adventure Bay!',
+                pastRule: 'Use MAY for formal permission.',
+                pastEx: '<strong>May</strong> I deploy my wings to scout the canyon, Ryder?'
+            }
+        };
+
+        function selectModalCard(key, withSound = true) {
+            if (withSound) playPupSound(modalLabData[key].pupKey);
+            const item = modalLabData[key];
+            const display = document.getElementById('modal-lab-display');
+            display.innerHTML = `
+                <div class="lg:col-span-5 rounded-3xl p-6 text-white flex flex-col justify-between shadow-lg" style="background-color: ${item.color}">
+                    <div class="flex items-center justify-between gap-3">
+                        <div>
+                            <span class="bg-white/20 text-xs font-extrabold uppercase px-3 py-1 rounded-full">${item.pup}</span>
+                            <h3 class="font-fredoka text-3xl sm:text-4xl font-bold mt-2 text-[#FFD100]">${item.pair}</h3>
+                            <p class="text-sm sm:text-base font-extrabold mt-1">${item.function}</p>
+                        </div>
+                        <div class="w-20 h-20 flex-shrink-0">${pupSVGs[item.pupKey]}</div>
+                    </div>
+                    <div class="mt-5 bg-black/25 rounded-2xl p-3.5 border border-white/25">
+                        <span class="text-xs uppercase font-extrabold text-[#FFD100]">Syntax Check</span>
+                        <p class="font-fredoka text-base sm:text-lg font-bold mt-0.5">Subject + ${item.pair.split(' ')[0].toLowerCase()} + Base Verb (V1)</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 grid grid-cols-1 gap-3.5">
+                    <div class="bg-blue-50 border-3 border-blue-200 rounded-2xl p-4">
+                        <span class="text-xs font-extrabold uppercase text-[#0057B8] bg-white px-2.5 py-1 rounded-lg border border-blue-200">Usage #1</span>
+                        <p class="font-bold text-slate-700 mt-1.5 text-sm">${item.presentRule}</p>
+                        <p class="font-fredoka text-base sm:text-lg text-[#0057B8] mt-1.5 bg-white p-2.5 rounded-xl border border-blue-100">🐾 "${item.presentEx}"</p>
+                    </div>
+                    <div class="bg-amber-50 border-3 border-amber-200 rounded-2xl p-4">
+                        <span class="text-xs font-extrabold uppercase text-[#FF6B00] bg-white px-2.5 py-1 rounded-lg border border-amber-200">Usage #2</span>
+                        <p class="font-bold text-slate-700 mt-1.5 text-sm">${item.pastRule}</p>
+                        <p class="font-fredoka text-base sm:text-lg text-slate-900 mt-1.5 bg-white p-2.5 rounded-xl border border-amber-100">🐾 "${item.pastEx}"</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        /* Sentence Rescue Machine Logic */
+        let builderMode = 'pos';
+        let currentPlainSentence = 'Chase is rescuing Chickaletta!';
+
+        function setBuilderMode(mode) {
+            builderMode = mode;
+            playPupSound('default');
+            ['pos', 'neg', 'que'].forEach(m => {
+                const btn = document.getElementById(`mode-${m}`);
+                if (m === mode) {
+                    btn.className = 'builder-mode-btn bg-[#28A745] text-white font-fredoka font-bold py-2.5 rounded-xl border-2 border-white text-xs sm:text-sm';
+                } else {
+                    btn.className = 'builder-mode-btn bg-slate-800 text-slate-300 font-fredoka font-bold py-2.5 rounded-xl border-2 border-slate-600 text-xs sm:text-sm';
+                }
+            });
+            updateSentenceBuilder();
+        }
+
+        function updateSentenceBuilder() {
+            const [subj, subjType] = document.getElementById('builder-subject').value.split('|');
+            const aux = document.getElementById('builder-aux').value;
+            const [verbWord, verbType] = document.getElementById('builder-verb').value.split('|');
+
+            // Validate Subject + Auxiliary Agreement
+            let errorMsg = '';
+            if (subjType === 'singular' && ['are', 'am', 'do', 'have'].includes(aux)) {
+                errorMsg = `Singular subject "${subj}" cannot pair with "${aux}". Try "is", "does", "has", or a modal!`;
+            } else if (subjType === 'plural' && ['is', 'am', 'does', 'has'].includes(aux)) {
+                errorMsg = `Plural subject "${subj}" needs a plural auxiliary like "are", "do", or "have"!`;
+            } else if (subjType === 'first' && ['is', 'are', 'does', 'has'].includes(aux)) {
+                errorMsg = `"I" pairs with "am", "do", "have", or modals—not "${aux}"!`;
+            }
+
+            // Validate Auxiliary + Main Verb Form
+            if (!errorMsg) {
+                if (['is', 'are', 'am'].includes(aux) && verbType === 'v1') {
+                    errorMsg = `"${aux}" (To Be) cannot take Base Verb "${verbWord}". Pick "rescuing (-ing)" for Continuous or "rescued (V3)" for Passive!`;
+                } else if (['do', 'does'].includes(aux) && verbType !== 'v1') {
+                    errorMsg = `"${aux}" (To Do) MUST always be followed by the Base Verb "rescue (V1)"!`;
+                } else if (['has', 'have'].includes(aux) && verbType !== 'v3') {
+                    errorMsg = `"${aux}" (To Have) needs the Past Participle "rescued (V3)" to form Present Perfect!`;
+                } else if (['can', 'must'].includes(aux) && verbType !== 'v1') {
+                    errorMsg = `Modal "${aux}" MUST always be followed by the Base Verb "rescue (V1)"!`;
+                }
+            }
+
+            // Construct Sentence in Pos / Neg / Que
+            const capAux = aux.charAt(0).toUpperCase() + aux.slice(1);
+            const subjDisplay = (subj === 'I') ? 'I' : (builderMode === 'que' ? subj.charAt(0).toLowerCase() + subj.slice(1) : subj);
+            let formattedHTML = '';
+            if (builderMode === 'pos') {
+                formattedHTML = `${subj} <span class="text-[#FFD100] underline">${aux}</span> ${verbWord} Chickaletta!`;
+                currentPlainSentence = `${subj} ${aux} ${verbWord} Chickaletta!`;
+            } else if (builderMode === 'neg') {
+                formattedHTML = `${subj} <span class="text-[#FF4F9A] underline">${aux} not</span> ${verbWord} Chickaletta.`;
+                currentPlainSentence = `${subj} ${aux} not ${verbWord} Chickaletta.`;
+            } else {
+                formattedHTML = `<span class="text-[#FFD100] underline">${capAux}</span> ${subjDisplay} ${verbWord} Chickaletta?`;
+                currentPlainSentence = `${capAux} ${subjDisplay} ${verbWord} Chickaletta?`;
+            }
+
+            const box = document.getElementById('builder-output-box');
+            const pill = document.getElementById('builder-status-pill');
+            const resText = document.getElementById('builder-result-text');
+            const fbText = document.getElementById('builder-feedback-text');
+
+            resText.innerHTML = formattedHTML;
+            if (errorMsg) {
+                box.style.borderColor = '#E4002B';
+                pill.className = 'inline-block bg-[#E4002B] text-white text-xs font-extrabold uppercase px-3 py-1 rounded-full mb-1.5';
+                pill.textContent = '🚨 Ryder Grammar Alert!';
+                fbText.textContent = errorMsg;
+            } else {
+                box.style.borderColor = '#28A745';
+                pill.className = 'inline-block bg-[#28A745] text-white text-xs font-extrabold uppercase px-3 py-1 rounded-full mb-1.5';
+                pill.textContent = '✅ PAW-some Valid Grammar!';
+                fbText.textContent = `Spot on! "${subj}" + "${aux}" + "${verbWord}" works cleanly in ${builderMode === 'pos' ? 'Positive' : builderMode === 'neg' ? 'Negative' : 'Question'} form.`;
+            }
+        }
+
+        function speakCurrentBuiltSentence() {
+            playPupSound('default');
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utter = new SpeechSynthesisUtterance(currentPlainSentence);
+                utter.lang = 'en-US';
+                utter.rate = 0.96;
+                window.speechSynthesis.speak(utter);
+            }
+        }
+
+        /* =========================================================================
+           7. 8-CARD 3D RESCUE FLIP-CARDS GENERATOR (SLIDE 3)
+           ========================================================================= */
+        let flipCardsList = [
+            {
+                verb: 'IS / ARE',
+                pupKey: 'chase',
+                pup: 'Chase • Verb TO BE',
+                color: '#0057B8',
+                role: 'Present Continuous Auxiliary',
+                formula: 'is / are + Verb-ing',
+                example: '"The pups <strong>are racing</strong> to the beach!"'
+            },
+            {
+                verb: 'DID',
+                pupKey: 'marshall',
+                pup: 'Marshall • Verb TO DO',
+                color: '#E4002B',
+                role: 'Past Simple Question & Negative',
+                formula: 'Did + Subject + Base Verb (V1)?',
+                example: '"<strong>Did</strong> Marshall <strong>find</strong> the lost kitten?"'
+            },
+            {
+                verb: 'HAS / HAVE',
+                pupKey: 'rocky',
+                pup: 'Rocky • Verb TO HAVE',
+                color: '#28A745',
+                role: 'Present Perfect Auxiliary',
+                formula: 'has / have + Past Participle (V3)',
+                example: '"Rocky <strong>has fixed</strong> the broken windmill!"'
+            },
+            {
+                verb: 'MUST',
+                pupKey: 'ryder',
+                pup: 'Ryder • Modal Auxiliary',
+                color: '#FF6B00',
+                role: 'Urgent Obligation & Necessity',
+                formula: 'must + Base Verb (V1)',
+                example: '"We <strong>must</strong> rescue Cap\'n Turbot\'s boat!"'
+            },
+            {
+                verb: 'CAN / COULD',
+                pupKey: 'zuma',
+                pup: 'Zuma • Modal Auxiliary',
+                color: '#0284C7',
+                role: 'Ability & Polite Requests',
+                formula: 'can / could + Base Verb (V1)',
+                example: '"Zuma <strong>can</strong> dive under the pier!"'
+            },
+            {
+                verb: 'MIGHT / MAY',
+                pupKey: 'skye',
+                pup: 'Skye • Modal Auxiliary',
+                color: '#FF4F9A',
+                role: 'Possibility & Permission',
+                formula: 'may / might + Base Verb (V1)',
+                example: '"Skye <strong>might</strong> spot the missing balloon!"'
+            },
+            {
+                verb: 'WAS / WERE',
+                pupKey: 'rubble',
+                pup: 'Rubble • Passive Auxiliary',
+                color: '#CA8A04',
+                role: 'Past Continuous & Passive Voice',
+                formula: 'was / were + V-ing OR V3',
+                example: '"The heavy rocks <strong>were lifted</strong> by Rubble!"'
+            },
+            {
+                verb: 'WILL / WOULD',
+                pupKey: 'ryder',
+                pup: 'Ryder • Future Modal',
+                color: '#4F46E5',
+                role: 'Future Promises & Offers',
+                formula: 'will / would + Base Verb (V1)',
+                example: '"The PAW Patrol <strong>will</strong> always help!"'
+            }
+        ];
+
+        function renderFlipCards() {
+            const grid = document.getElementById('flip-cards-grid');
+            grid.innerHTML = flipCardsList.map((card) => `
+                <div class="flip-card h-64" onclick="this.classList.toggle('flipped'); playPupSound('${card.pupKey}');">
+                    <div class="flip-card-inner shadow-lg rounded-3xl">
+                        <!-- FRONT -->
+                        <div class="flip-card-front p-4 text-white flex flex-col items-center justify-between border-4 border-[#FFD100]" style="background-color: ${card.color}">
+                            <span class="text-[11px] font-extrabold uppercase tracking-wider bg-black/25 px-3 py-1 rounded-full">${card.pup}</span>
+                            <div class="text-center">
+                                <div class="w-16 h-16 mx-auto mb-1.5">${pupSVGs[card.pupKey]}</div>
+                                <h3 class="font-fredoka text-2xl font-bold text-[#FFD100]">${card.verb}</h3>
+                            </div>
+                            <span class="text-xs font-bold bg-white/20 px-3 py-1 rounded-full">👆 Tap to Flip</span>
+                        </div>
+                        <!-- BACK -->
+                        <div class="flip-card-back bg-white p-4 flex flex-col justify-between border-4" style="border-color: ${card.color}">
+                            <div>
+                                <span class="text-[11px] font-extrabold uppercase px-2.5 py-0.5 rounded-full text-white" style="background-color: ${card.color}">${card.role}</span>
+                                <p class="text-[11px] font-extrabold text-slate-500 mt-2">Formula:</p>
+                                <p class="font-fredoka font-bold text-xs sm:text-sm text-slate-800 bg-slate-100 px-2.5 py-1 rounded-lg mt-0.5">${card.formula}</p>
+                            </div>
+                            <div class="bg-blue-50 p-2.5 rounded-xl border border-blue-200">
+                                <p class="text-xs font-bold text-slate-800">🐾 ${card.example}</p>
+                            </div>
+                            <span class="text-[10px] font-extrabold text-center text-slate-400">Tap again to flip back</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function shuffleFlipCards() {
+            playPupSound('skye');
+            flipCardsList = flipCardsList.sort(() => Math.random() - 0.5);
+            renderFlipCards();
+        }
+
+        let allFlippedState = false;
+        function toggleAllFlipCards() {
+            playPupSound('default');
+            allFlippedState = !allFlippedState;
+            document.querySelectorAll('.flip-card').forEach(c => {
+                c.classList.toggle('flipped', allFlippedState);
+            });
+        }
+
+        /* =========================================================================
+           8. RAPID PUP DISPATCH MINI-GAME & OFFICIAL BADGE QUIZ (SLIDE 4)
+              (Varied & Randomized Answer Positions across A, B, C, and D!)
+           ========================================================================= */
+        const dispatchMissions = [
+            {
+                loc: '📍 Adventure Bay Bridge',
+                prompt: '"Mayor Goodway\'s balloon _____ floating away into the clouds!"',
+                hint: 'Hint: Singular subject + "-ing" verb happening right now!',
+                options: ['are', 'do', 'is', 'have'],
+                answer: 'is',
+                pup: 'skye'
+            },
+            {
+                loc: '📍 Jake\'s Snowy Mountain',
+                prompt: '"_____ Jake and Everest seen the lost snow bunny yet?"',
+                hint: 'Hint: Plural subject + Past Participle "seen" (Present Perfect)!',
+                options: ['Has', 'Have', 'Does', 'Is'],
+                answer: 'Have',
+                pup: 'chase'
+            },
+            {
+                loc: '📍 Seal Island Lighthouse',
+                prompt: '"Cap\'n Turbot\'s boat is sinking! We _____ send Zuma right away!"',
+                hint: 'Hint: Urgent necessity + Base Verb "send"!',
+                options: ['musts', 'are', 'having', 'must'],
+                answer: 'must',
+                pup: 'zuma'
+            },
+            {
+                loc: '📍 City Hall Square',
+                prompt: '"_____ Mayor Humdinger steal the golden trophy yesterday?"',
+                hint: 'Hint: Past Simple question + Base Verb "steal"!',
+                options: ['Does', 'Was', 'Did', 'Has'],
+                answer: 'Did',
+                pup: 'marshall'
+            }
+        ];
+
+        let dispatchIdx = 0;
+        let dispatchStreak = 0;
+        let dispatchTotal = 0;
+
+        // Fisher-Yates shuffle helper to randomize option placement every round
+        function shuffleArray(array) {
+            const arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        function renderDispatchMission() {
+            const m = dispatchMissions[dispatchIdx % dispatchMissions.length];
+            document.getElementById('dispatch-location').textContent = m.loc;
+            document.getElementById('dispatch-prompt').textContent = m.prompt;
+            document.getElementById('dispatch-hint').textContent = m.hint;
+            document.getElementById('dispatch-feedback').textContent = '';
+
+            // Shuffle options so the correct choice appears across A, B, C, and D
+            const shuffledOptions = shuffleArray(m.options);
+
+            const btnBox = document.getElementById('dispatch-buttons');
+            btnBox.innerHTML = shuffledOptions.map((opt, idx) => `
+                <button onclick="checkDispatchAnswer('${opt}')" class="btn-3d bg-white hover:bg-blue-100 text-[#0057B8] font-fredoka font-bold text-base py-3 px-3 rounded-xl border-2 border-[#0057B8] shadow">
+                    <span class="text-xs font-extrabold text-[#FF6B00] mr-1">${String.fromCharCode(65 + idx)}.</span>${opt}
+                </button>
+            `).join('');
+        }
+
+        function checkDispatchAnswer(chosen) {
+            const m = dispatchMissions[dispatchIdx % dispatchMissions.length];
+            const fb = document.getElementById('dispatch-feedback');
+            if (chosen === m.answer) {
+                dispatchStreak++;
+                dispatchTotal++;
+                playPupSound(m.pup);
+                launchPawCelebration();
+                document.getElementById('dispatch-streak-badge').textContent = `🔥 Streak: ${dispatchStreak}`;
+                document.getElementById('dispatch-count').textContent = `Rescues: ${dispatchTotal}`;
+                fb.innerHTML = `<span class="text-[#28A745]">✅ Rescue Launched! Loading next emergency...</span>`;
+                setTimeout(() => {
+                    dispatchIdx++;
+                    renderDispatchMission();
+                }, 1150);
+            } else {
+                dispatchStreak = 0;
+                playPupSound('rubble');
+                document.getElementById('dispatch-streak-badge').textContent = `🔥 Streak: 0`;
+                fb.innerHTML = `<span class="text-[#E4002B]">🚨 Not quite! Check the hint and try another auxiliary!</span>`;
+            }
+        }
+
+        /* Official 6-Question Badge Quiz (Distributed across A, B, C, D + Shuffled on Restart!) */
+        const baseQuizQuestions = [
+            {
+                q: '"_____ Marshall extinguished the fire at Jake\'s Mountain yet?"',
+                options: ['Does', 'Is', 'Has', 'Can'],
+                answer: 2, // C
+                explain: 'Correct! "Extinguished" is a Past Participle (V3), so it pairs with "Has" for Present Perfect!'
+            },
+            {
+                q: '"Every pup _____ wear a life vest when riding on Zuma\'s hovercraft."',
+                options: ['must to', 'must', 'musts', 'having'],
+                answer: 1, // B
+                explain: 'Awesome! Modals like "must" never add -s and are followed directly by the base verb "wear".'
+            },
+            {
+                q: '"Look up in the sky! Skye _____ flying her helicopter over Adventure Bay."',
+                options: ['does', 'has', 'will', 'is'],
+                answer: 3, // D
+                explain: 'Spot on! "is" + "flying" (Verb-ing) creates the Present Continuous tense.'
+            },
+            {
+                q: '"_____ Mayor Humdinger\'s kittens cause trouble yesterday?"',
+                options: ['Did', 'Does', 'Were', 'Has'],
+                answer: 0, // A
+                explain: 'Great job! "Yesterday" indicates Past Simple, and "Did" + Base Verb ("cause") forms the question.'
+            },
+            {
+                q: '"Rubble _____ dig through the giant snowdrift because his bulldozer is super strong!"',
+                options: ['is', 'has', 'can', 'did to'],
+                answer: 2, // C
+                explain: 'PAW-some! "Can" expresses Rubble\'s ability and pairs with the base verb "dig".'
+            },
+            {
+                q: '"The broken train tracks _____ repaired by Rocky and Rubble last night."',
+                options: ['did', 'were', 'has', 'can'],
+                answer: 1, // B
+                explain: 'Mission Complete! Plural "tracks" + "were" + Past Participle "repaired" forms the Past Passive Voice!'
+            }
+        ];
+
+        // Build randomized option ordering for each quiz session while tracking the right answer index
+        function buildQuizSession() {
+            return baseQuizQuestions.map(item => {
+                const correctText = item.options[item.answer];
+                const shuffledOpts = shuffleArray(item.options);
+                return {
+                    q: item.q,
+                    options: shuffledOpts,
+                    answer: shuffledOpts.indexOf(correctText),
+                    explain: item.explain
+                };
+            });
+        }
+
+        let quizQuestions = buildQuizSession();
+        let currentQuizIdx = 0;
+        let quizScore = 0;
+        let quizAnswered = false;
+
+        function renderQuizQuestion() {
+            const item = quizQuestions[currentQuizIdx];
+            quizAnswered = false;
+            document.getElementById('quiz-progress-text').textContent = `Mission Question ${currentQuizIdx + 1} of ${quizQuestions.length}`;
+            document.getElementById('quiz-question-text').textContent = item.q;
+            document.getElementById('quiz-feedback').classList.add('hidden');
+            document.getElementById('quiz-next-btn').classList.add('hidden');
+
+            const container = document.getElementById('quiz-options-container');
+            container.innerHTML = item.options.map((opt, idx) => `
+                <button onclick="submitQuizAnswer(${idx})" class="quiz-opt-btn btn-3d text-left font-fredoka font-bold text-base px-4 py-3 rounded-xl border-2 border-blue-200 bg-blue-50 hover:bg-blue-100 text-[#0057B8] transition">
+                    ${String.fromCharCode(65 + idx)}. ${opt}
+                </button>
+            `).join('');
+        }
+
+        function submitQuizAnswer(selectedIdx) {
+            if (quizAnswered) return;
+            quizAnswered = true;
+
+            const item = quizQuestions[currentQuizIdx];
+            const buttons = document.querySelectorAll('.quiz-opt-btn');
+            const feedback = document.getElementById('quiz-feedback');
+            feedback.classList.remove('hidden');
+
+            if (selectedIdx === item.answer) {
+                quizScore++;
+                playPupSound('success');
+                launchPawCelebration();
+                buttons[selectedIdx].className = 'quiz-opt-btn font-fredoka font-bold text-base px-4 py-3 rounded-xl border-2 border-green-600 bg-[#28A745] text-white';
+                feedback.className = 'mt-4 p-3 rounded-xl text-sm font-bold bg-green-100 text-green-900 border-2 border-[#28A745]';
+                feedback.textContent = `🎉 ${item.explain}`;
+            } else {
+                playPupSound('marshall');
+                buttons[selectedIdx].className = 'quiz-opt-btn font-fredoka font-bold text-base px-4 py-3 rounded-xl border-2 border-red-600 bg-[#E4002B] text-white';
+                buttons[item.answer].className = 'quiz-opt-btn font-fredoka font-bold text-base px-4 py-3 rounded-xl border-2 border-green-600 bg-[#28A745] text-white';
+                feedback.className = 'mt-4 p-3 rounded-xl text-sm font-bold bg-red-100 text-red-900 border-2 border-[#E4002B]';
+                feedback.textContent = `🐾 Good try, pup! ${item.explain}`;
+            }
+
+            document.getElementById('quiz-score-badge').textContent = `Score: ${quizScore} / ${quizQuestions.length}`;
+
+            const nextBtn = document.getElementById('quiz-next-btn');
+            nextBtn.classList.remove('hidden');
+            nextBtn.textContent = (currentQuizIdx < quizQuestions.length - 1) ? 'Next Question ➔' : '🏆 Claim Rescue Trophy!';
+        }
+
+        function nextQuizQuestion() {
+            if (currentQuizIdx < quizQuestions.length - 1) {
+                currentQuizIdx++;
+                renderQuizQuestion();
+            } else {
+                playPupSound('success');
+                launchPawCelebration();
+                document.getElementById('quiz-question-text').innerHTML = `
+                    <span class="text-[#28A745] text-2xl block mb-1">🏆 PAW PATROL HONORARY MEMBER!</span>
+                    You scored <strong>${quizScore} out of ${quizQuestions.length}</strong> on the Auxiliary Verbs Rescue Mission!
+                `;
+                document.getElementById('quiz-options-container').innerHTML = '';
+                document.getElementById('quiz-next-btn').classList.add('hidden');
+            }
+        }
+
+        function resetQuiz() {
+            quizQuestions = buildQuizSession();
+            currentQuizIdx = 0;
+            quizScore = 0;
+            document.getElementById('quiz-score-badge').textContent = `Score: 0 / ${quizQuestions.length}`;
+            renderQuizQuestion();
+        }
+
+        /* Celebratory Paw & Star Burst */
+        function launchPawCelebration() {
+            const container = document.getElementById('celebration-container');
+            const emojis = ['🐾', '⭐', '🦴', '🚒', '🚓', '🚁', '♻️'];
+            for (let i = 0; i < 20; i++) {
+                const el = document.createElement('div');
+                el.textContent = emojis[i % emojis.length];
+                el.style.position = 'absolute';
+                el.style.left = Math.random() * 95 + 'vw';
+                el.style.top = '-30px';
+                el.style.fontSize = (20 + Math.random() * 18) + 'px';
+                el.style.transition = 'transform 1.6s ease-out, opacity 1.6s ease-out';
+                container.appendChild(el);
+
+                requestAnimationFrame(() => {
+                    el.style.transform = `translateY(${window.innerHeight + 60}px) rotate(${Math.random() * 360}deg)`;
+                    el.style.opacity = '0';
+                });
+
+                setTimeout(() => el.remove(), 1700);
+            }
+        }
+
+        /* Initialize All Interactive Components on Page Load */
+        window.addEventListener('DOMContentLoaded', () => {
+            renderAllCharacterPortraits();
+            goToSlide(0, false);
+            selectMindmapBranch('be', false);
+            selectModalCard('can', false);
+            updateSentenceBuilder();
+            renderFlipCards();
+            renderDispatchMission();
+            renderQuizQuestion();
+        });
+    </script>
+</body>
+</html>
